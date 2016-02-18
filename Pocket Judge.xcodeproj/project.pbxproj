@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18F0C36A1C75CC150042BCA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C3691C75CC150042BCA3 /* AppDelegate.swift */; };
+		18F0C36C1C75CC150042BCA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C36B1C75CC150042BCA3 /* ViewController.swift */; };
+		18F0C36F1C75CC150042BCA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C36D1C75CC150042BCA3 /* Main.storyboard */; };
+		18F0C3711C75CC150042BCA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C3701C75CC150042BCA3 /* Assets.xcassets */; };
+		18F0C3741C75CC150042BCA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C3721C75CC150042BCA3 /* LaunchScreen.storyboard */; };
+		18F0C37F1C75CC150042BCA3 /* Pocket_JudgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C37E1C75CC150042BCA3 /* Pocket_JudgeTests.swift */; };
+		18F0C38A1C75CC150042BCA3 /* Pocket_JudgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C3891C75CC150042BCA3 /* Pocket_JudgeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18F0C37B1C75CC150042BCA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18F0C35E1C75CC150042BCA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18F0C3651C75CC150042BCA3;
+			remoteInfo = "Pocket Judge";
+		};
+		18F0C3861C75CC150042BCA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18F0C35E1C75CC150042BCA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18F0C3651C75CC150042BCA3;
+			remoteInfo = "Pocket Judge";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18F0C3661C75CC150042BCA3 /* Pocket Judge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Judge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18F0C3691C75CC150042BCA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18F0C36B1C75CC150042BCA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18F0C36E1C75CC150042BCA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18F0C3701C75CC150042BCA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18F0C3731C75CC150042BCA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18F0C3751C75CC150042BCA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18F0C37A1C75CC150042BCA3 /* Pocket JudgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pocket JudgeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18F0C37E1C75CC150042BCA3 /* Pocket_JudgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocket_JudgeTests.swift; sourceTree = "<group>"; };
+		18F0C3801C75CC150042BCA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18F0C3851C75CC150042BCA3 /* Pocket JudgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pocket JudgeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18F0C3891C75CC150042BCA3 /* Pocket_JudgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocket_JudgeUITests.swift; sourceTree = "<group>"; };
+		18F0C38B1C75CC150042BCA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18F0C3631C75CC150042BCA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F0C3771C75CC150042BCA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F0C3821C75CC150042BCA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18F0C35D1C75CC150042BCA3 = {
+			isa = PBXGroup;
+			children = (
+				18F0C3681C75CC150042BCA3 /* Pocket Judge */,
+				18F0C37D1C75CC150042BCA3 /* Pocket JudgeTests */,
+				18F0C3881C75CC150042BCA3 /* Pocket JudgeUITests */,
+				18F0C3671C75CC150042BCA3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18F0C3671C75CC150042BCA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18F0C3661C75CC150042BCA3 /* Pocket Judge.app */,
+				18F0C37A1C75CC150042BCA3 /* Pocket JudgeTests.xctest */,
+				18F0C3851C75CC150042BCA3 /* Pocket JudgeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18F0C3681C75CC150042BCA3 /* Pocket Judge */ = {
+			isa = PBXGroup;
+			children = (
+				18F0C3691C75CC150042BCA3 /* AppDelegate.swift */,
+				18F0C36B1C75CC150042BCA3 /* ViewController.swift */,
+				18F0C36D1C75CC150042BCA3 /* Main.storyboard */,
+				18F0C3701C75CC150042BCA3 /* Assets.xcassets */,
+				18F0C3721C75CC150042BCA3 /* LaunchScreen.storyboard */,
+				18F0C3751C75CC150042BCA3 /* Info.plist */,
+			);
+			path = "Pocket Judge";
+			sourceTree = "<group>";
+		};
+		18F0C37D1C75CC150042BCA3 /* Pocket JudgeTests */ = {
+			isa = PBXGroup;
+			children = (
+				18F0C37E1C75CC150042BCA3 /* Pocket_JudgeTests.swift */,
+				18F0C3801C75CC150042BCA3 /* Info.plist */,
+			);
+			path = "Pocket JudgeTests";
+			sourceTree = "<group>";
+		};
+		18F0C3881C75CC150042BCA3 /* Pocket JudgeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				18F0C3891C75CC150042BCA3 /* Pocket_JudgeUITests.swift */,
+				18F0C38B1C75CC150042BCA3 /* Info.plist */,
+			);
+			path = "Pocket JudgeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18F0C3651C75CC150042BCA3 /* Pocket Judge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18F0C38E1C75CC150042BCA3 /* Build configuration list for PBXNativeTarget "Pocket Judge" */;
+			buildPhases = (
+				18F0C3621C75CC150042BCA3 /* Sources */,
+				18F0C3631C75CC150042BCA3 /* Frameworks */,
+				18F0C3641C75CC150042BCA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pocket Judge";
+			productName = "Pocket Judge";
+			productReference = 18F0C3661C75CC150042BCA3 /* Pocket Judge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18F0C3791C75CC150042BCA3 /* Pocket JudgeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18F0C3911C75CC150042BCA3 /* Build configuration list for PBXNativeTarget "Pocket JudgeTests" */;
+			buildPhases = (
+				18F0C3761C75CC150042BCA3 /* Sources */,
+				18F0C3771C75CC150042BCA3 /* Frameworks */,
+				18F0C3781C75CC150042BCA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18F0C37C1C75CC150042BCA3 /* PBXTargetDependency */,
+			);
+			name = "Pocket JudgeTests";
+			productName = "Pocket JudgeTests";
+			productReference = 18F0C37A1C75CC150042BCA3 /* Pocket JudgeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18F0C3841C75CC150042BCA3 /* Pocket JudgeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18F0C3941C75CC150042BCA3 /* Build configuration list for PBXNativeTarget "Pocket JudgeUITests" */;
+			buildPhases = (
+				18F0C3811C75CC150042BCA3 /* Sources */,
+				18F0C3821C75CC150042BCA3 /* Frameworks */,
+				18F0C3831C75CC150042BCA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18F0C3871C75CC150042BCA3 /* PBXTargetDependency */,
+			);
+			name = "Pocket JudgeUITests";
+			productName = "Pocket JudgeUITests";
+			productReference = 18F0C3851C75CC150042BCA3 /* Pocket JudgeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18F0C35E1C75CC150042BCA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Carlos Arcenas";
+				TargetAttributes = {
+					18F0C3651C75CC150042BCA3 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					18F0C3791C75CC150042BCA3 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 18F0C3651C75CC150042BCA3;
+					};
+					18F0C3841C75CC150042BCA3 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 18F0C3651C75CC150042BCA3;
+					};
+				};
+			};
+			buildConfigurationList = 18F0C3611C75CC150042BCA3 /* Build configuration list for PBXProject "Pocket Judge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18F0C35D1C75CC150042BCA3;
+			productRefGroup = 18F0C3671C75CC150042BCA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18F0C3651C75CC150042BCA3 /* Pocket Judge */,
+				18F0C3791C75CC150042BCA3 /* Pocket JudgeTests */,
+				18F0C3841C75CC150042BCA3 /* Pocket JudgeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18F0C3641C75CC150042BCA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F0C3741C75CC150042BCA3 /* LaunchScreen.storyboard in Resources */,
+				18F0C3711C75CC150042BCA3 /* Assets.xcassets in Resources */,
+				18F0C36F1C75CC150042BCA3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F0C3781C75CC150042BCA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F0C3831C75CC150042BCA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18F0C3621C75CC150042BCA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F0C36C1C75CC150042BCA3 /* ViewController.swift in Sources */,
+				18F0C36A1C75CC150042BCA3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F0C3761C75CC150042BCA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F0C37F1C75CC150042BCA3 /* Pocket_JudgeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F0C3811C75CC150042BCA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F0C38A1C75CC150042BCA3 /* Pocket_JudgeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18F0C37C1C75CC150042BCA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18F0C3651C75CC150042BCA3 /* Pocket Judge */;
+			targetProxy = 18F0C37B1C75CC150042BCA3 /* PBXContainerItemProxy */;
+		};
+		18F0C3871C75CC150042BCA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18F0C3651C75CC150042BCA3 /* Pocket Judge */;
+			targetProxy = 18F0C3861C75CC150042BCA3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18F0C36D1C75CC150042BCA3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18F0C36E1C75CC150042BCA3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18F0C3721C75CC150042BCA3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18F0C3731C75CC150042BCA3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18F0C38C1C75CC150042BCA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18F0C38D1C75CC150042BCA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18F0C38F1C75CC150042BCA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Pocket Judge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlosarcenas.Pocket-Judge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18F0C3901C75CC150042BCA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Pocket Judge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlosarcenas.Pocket-Judge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		18F0C3921C75CC150042BCA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Pocket JudgeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlosarcenas.Pocket-JudgeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pocket Judge.app/Pocket Judge";
+			};
+			name = Debug;
+		};
+		18F0C3931C75CC150042BCA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Pocket JudgeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlosarcenas.Pocket-JudgeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pocket Judge.app/Pocket Judge";
+			};
+			name = Release;
+		};
+		18F0C3951C75CC150042BCA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Pocket JudgeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlosarcenas.Pocket-JudgeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Pocket Judge";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		18F0C3961C75CC150042BCA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Pocket JudgeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlosarcenas.Pocket-JudgeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Pocket Judge";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18F0C3611C75CC150042BCA3 /* Build configuration list for PBXProject "Pocket Judge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18F0C38C1C75CC150042BCA3 /* Debug */,
+				18F0C38D1C75CC150042BCA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18F0C38E1C75CC150042BCA3 /* Build configuration list for PBXNativeTarget "Pocket Judge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18F0C38F1C75CC150042BCA3 /* Debug */,
+				18F0C3901C75CC150042BCA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		18F0C3911C75CC150042BCA3 /* Build configuration list for PBXNativeTarget "Pocket JudgeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18F0C3921C75CC150042BCA3 /* Debug */,
+				18F0C3931C75CC150042BCA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		18F0C3941C75CC150042BCA3 /* Build configuration list for PBXNativeTarget "Pocket JudgeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18F0C3951C75CC150042BCA3 /* Debug */,
+				18F0C3961C75CC150042BCA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18F0C35E1C75CC150042BCA3 /* Project object */;
+}
