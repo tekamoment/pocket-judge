@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="329" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LJc-yc-zaH" id="mw0-2x-4GM">
-                <rect key="frame" x="0.0" y="0.0" width="329" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="329" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Di-vc-vac">
@@ -32,11 +32,20 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEN-vh-m2C">
+                        <rect key="frame" x="249" y="10" width="25" height="25"/>
+                        <state key="normal" image="EditIconBrown"/>
+                        <connections>
+                            <action selector="trashButtonTapped:" destination="LJc-yc-zaH" eventType="touchUpInside" id="zhH-Ya-WQ1"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" red="0.95294117647058818" green="0.89411764705882346" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
+                    <constraint firstItem="xEN-vh-m2C" firstAttribute="top" secondItem="8Di-vc-vac" secondAttribute="top" id="4x2-4m-YY0"/>
                     <constraint firstItem="8Di-vc-vac" firstAttribute="top" secondItem="mw0-2x-4GM" secondAttribute="topMargin" constant="2" id="BjA-FQ-zU2"/>
                     <constraint firstItem="wAJ-za-W4N" firstAttribute="leading" secondItem="mw0-2x-4GM" secondAttribute="leadingMargin" constant="21" id="NZu-BQ-C4p"/>
+                    <constraint firstItem="8Di-vc-vac" firstAttribute="leading" secondItem="xEN-vh-m2C" secondAttribute="trailing" constant="8" symbolic="YES" id="Yew-yB-LjV"/>
                     <constraint firstAttribute="bottomMargin" secondItem="8Di-vc-vac" secondAttribute="bottom" constant="0.5" id="k5N-cC-Cz5"/>
                     <constraint firstAttribute="trailingMargin" secondItem="8Di-vc-vac" secondAttribute="trailing" constant="14" id="nNG-Ld-W2r"/>
                     <constraint firstItem="wAJ-za-W4N" firstAttribute="centerY" secondItem="mw0-2x-4GM" secondAttribute="centerY" id="qs1-BR-irM"/>
@@ -44,12 +53,14 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="editNameButton" destination="xEN-vh-m2C" id="CUs-UW-BlS"/>
                 <outlet property="optionTitleLabel" destination="wAJ-za-W4N" id="CrM-l8-rGC"/>
             </connections>
             <point key="canvasLocation" x="226.5" y="421"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="EditIconBrown" width="25" height="25"/>
         <image name="TrashIcon" width="25" height="25"/>
     </resources>
 </document>

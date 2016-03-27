@@ -11,7 +11,8 @@ import RealmSwift
 
 import SDCAlertView
 
-class DecisionViewController: HeaderContainerViewController, UITextViewDelegate, UITableViewDelegate, OptionTableViewCellDelegate {
+class DecisionViewController: HeaderContainerViewController, UITextViewDelegate, UITableViewDelegate {
+    let realm = try! Realm()
     var decision: Decision?
     var decisionState: DecisionState? {
         willSet(newDecisionState) {
@@ -64,7 +65,7 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        headerTitleView.text = decision!.name
+        headerTitleView.text = decision!.name.uppercaseString
         characterImageView.image = UIImage(named: headerImageName)!
         
         decisionsTableController = UITableViewController(style: .Plain)
@@ -98,7 +99,7 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
                 optCell.optionTitleLabel.text = opt.name.uppercaseString
                 optCell.decisionState = .OptionsState
                 optCell.cellIndex = indexPath.row
-                optCell.delegate = self
+                optCell.editNameButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.editOptionNameButtonTapped)))
                 return optCell
             })
             tableViewDataSource = optionsTableSource
@@ -111,7 +112,6 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
                 decCell.optionTitleLabel.text = dec.name.uppercaseString
                 decCell.decisionState = .ExistingDecisionsState
                 decCell.cellIndex = indexPath.row
-                decCell.delegate = self
                 return decCell
             })
             tableViewDataSource = decisionsTableSource
@@ -133,6 +133,10 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func editOptionNameButtonTapped() {
+        print("Option name edit button tapped")
     }
     
     func informationIconTapped() {
@@ -197,6 +201,44 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
     
     func newOptionTapped() {
         print("WOOH NEW OPTION")
+        
+        let newOptionAlertController = UIAlertController(title: "New Decision", message: "Enter the name of your decision's new option.", preferredStyle: .Alert)
+        
+        let saveNameAction = UIAlertAction(title: "OK", style: .Default) { (_) in
+            let nameTextField = newOptionAlertController.textFields![0] as UITextField
+            self.createNewOption(nameTextField.text)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (_) in }
+        
+        newOptionAlertController.addTextFieldWithConfigurationHandler { (textField) in
+            textField.placeholder = "Decision name"
+        }
+        
+        newOptionAlertController.addAction(saveNameAction)
+        newOptionAlertController.addAction(cancelAction)
+        
+        presentViewController(newOptionAlertController, animated: true, completion: nil)
+        
+    }
+    
+    func createNewOption(name: String?) {
+        guard name != nil || (name?.isEmpty)! else {
+            return
+        }
+        
+        // save to realm here
+        let newOption = Option(name: name!)
+        
+        do {
+            try realm.write({
+                self.decision!.addOption(newOption)
+            })
+        } catch {
+            print("Welp. An exception.")
+        }
+        
+        decisionsTableController!.tableView.reloadData()
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -247,6 +289,8 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
         
         editName.addAction(changeNameAction)
         editName.addAction(cancelAction)
+        
+        presentViewController(editName, animated: true, completion: nil)
     }
     
     func changeName(textField: UITextField, indexSelected: Int) {

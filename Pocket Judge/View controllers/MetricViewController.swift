@@ -8,10 +8,12 @@
 
 import UIKit
 import SDCAlertView
+import RealmSwift
 
 class MetricViewController: HeaderContainerViewController, UITableViewDataSource, UITableViewDelegate {
     
     // going to involve delegation
+    let realm = try! Realm()
     
     var decision: Decision? {
         didSet {
@@ -32,16 +34,18 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
     
     var activeMetric: Metric? = nil
     
+    @IBOutlet weak var optionNameLabel: UILabel!
+    @IBOutlet weak var numberOfOptionsLabel: UILabel!
     @IBOutlet weak var minimumTextLabel: UILabel!
     @IBOutlet weak var maximumTextLabel: UILabel!
     @IBOutlet weak var valueSlider: UISlider!
     @IBOutlet weak var metricIndicatorControl: UIPageControl!
+    @IBOutlet weak var leftButton: UIButton!
+    @IBOutlet weak var rightButton: UIButton!
 
     var metricsTableController: UITableViewController?
     
     override func viewDidLoad() {
-//        var buttonItems = [UIBarButtonItem]()
-//        buttonItems.append(<#T##newElement: Element##Element#>)
         super.viewDidLoad()
         
         // generate all metrics
@@ -59,6 +63,8 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Evaluate", style: .Plain, target: nil, action: nil)
         valueSlider.continuous = false
         metricIndicatorControl.userInteractionEnabled = false
+        
+        refreshInnerValues()
         
         // requisite bar button items
         var buttonItems = [UIBarButtonItem]()
@@ -85,12 +91,64 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
         metricsTableController!.tableView.rowHeight = UITableViewAutomaticDimension
         metricsTableController!.tableView.estimatedRowHeight = 100
         metricsTableController!.tableView.backgroundColor = UIColor.clearColor()
+        metricsTableController!.tableView.separatorColor = UIColor.clearColor()
         
         //// delegate and datasouce
         metricsTableController!.tableView.dataSource = self
         metricsTableController!.tableView.delegate = self
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+       refreshSelectedRowForOptionChange()
+    }
+    
+    func refreshInnerValues() {
+        optionNameLabel.text = option?.name.uppercaseString
+        let indexOfCurrentOption = decision!.options.indexOf(option!)!
+        numberOfOptionsLabel.text = "\(indexOfCurrentOption + 1) of \(decision!.options.count)"
+        
+        if indexOfCurrentOption == 0 {
+            leftButton.enabled = false
+            rightButton.enabled = true
+        } else if indexOfCurrentOption == decision!.options.count - 1 {
+            leftButton.enabled = true
+            rightButton.enabled = false
+        } else {
+            leftButton.enabled = true
+            rightButton.enabled = true
+        }
+    }
+    
+    func refreshSelectedRowForOptionChange() {
+        metricsTableController!.tableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: UITableViewScrollPosition.Top)
+        tableView(metricsTableController!.tableView, didSelectRowAtIndexPath: NSIndexPath(forRow: 0, inSection: 0))
+    }
 
+    @IBAction func leftButtonPressed(sender: AnyObject) {
+        let indexOfCurrentOption = decision!.options.indexOf(option!)!
+        guard indexOfCurrentOption != 0 else {
+            return
+        }
+        
+        let indexOfRequestedOption = indexOfCurrentOption - 1
+        option = decision!.options[indexOfRequestedOption]
+        refreshInnerValues()
+        refreshSelectedRowForOptionChange()
+    }
+    
+    @IBAction func rightButtonPressed(sender: AnyObject) {
+        let indexOfCurrentOption = decision!.options.indexOf(option!)!
+        guard indexOfCurrentOption != decision!.options.count - 1 else {
+            return
+        }
+        
+        let indexOfRequestedOption = indexOfCurrentOption + 1
+        option = decision!.options[indexOfRequestedOption]
+        refreshInnerValues()
+        refreshSelectedRowForOptionChange()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -172,7 +230,7 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
         // check if metric is not null
         // if null, then set the value to exactly halfway
         if activeMetric!.value == nil {
-            activeMetric!.setMetricValue((metricMax + metricMin) / 2.0)
+            writeMetricUpdate((metricMax + metricMin) / 2.0)
         }
         
         // adjust the slider to represent the value
@@ -215,7 +273,13 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
     }
     
     func resetCurrentMetric() {
+        let metricBounds = activeMetric!.type.maximumMinimum()
+        let metricMin = metricBounds.0
+        let metricMax = metricBounds.1
+
+        activeMetric!.setMetricValue((metricMax + metricMin) / 2.0)
         
+        valueSlider.value = activeMetric!.value!
     }
     
     func calculateDecisions() {
@@ -226,13 +290,24 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
         // fetch current metric
         var newValue = sender.value
         
-        if activeMetric!.type.metricCategory == "Cost" {
+        if activeMetric!.type.metricCategory == "Cost" && newValue > 0.0 {
             // absolute value
             newValue = (sender.value - activeMetric!.type.maximumMinimum().0) * -1.0
+            print("Cost original: \(sender.value) and scaled: \(newValue)")
         }
         
-        // update here
+        writeMetricUpdate(newValue)
     
+    }
+    
+    func writeMetricUpdate(value: Float) {
+        do {
+            try realm.write({
+                activeMetric!.setMetricValue(value)
+            })
+        } catch {
+            print("Welp. An exception occurred.")
+        }
     }
 
     /*

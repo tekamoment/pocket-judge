@@ -11,14 +11,17 @@ import UIKit
 class OptionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var optionTitleLabel: UILabel!
+    @IBOutlet weak var editNameButton: UIButton!
     var decisionState: DecisionState? {
         didSet {
             if decisionState == .ExistingDecisionsState {
                 backgroundColor = UIColor(hex: "f6b783")
                 optionTitleLabel.textColor = UIColor.whiteColor()
+                editNameButton.hidden = true
             } else {
                 backgroundColor = UIColor(hex: "f3e4cc")
                 optionTitleLabel.textColor = UIColor.blackColor()
+                editNameButton.hidden = false
             }
         }
     }
