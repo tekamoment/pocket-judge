@@ -7,6 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1815D0A01CA7E53E00DC89C7 /* BackgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 1815D09F1CA7E53E00DC89C7 /* BackgroundImage.png */; };
+		1815D0A41CA7E7F700DC89C7 /* SentencedOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815D0A31CA7E7F600DC89C7 /* SentencedOptionViewController.swift */; };
+		1815D0A71CA7E88F00DC89C7 /* Judge.png in Resources */ = {isa = PBXBuildFile; fileRef = 1815D0A51CA7E88F00DC89C7 /* Judge.png */; };
+		1815D0A81CA7E88F00DC89C7 /* Stenographer.png in Resources */ = {isa = PBXBuildFile; fileRef = 1815D0A61CA7E88F00DC89C7 /* Stenographer.png */; };
+		181DFC1D1CA2B08000DFF34D /* MetricCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181DFC1C1CA2B08000DFF34D /* MetricCell.xib */; };
+		181DFC211CA2D10700DFF34D /* MetricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DFC201CA2D10700DFF34D /* MetricViewController.swift */; };
+		181DFC231CA2D2D700DFF34D /* ResultSliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DFC221CA2D2D700DFF34D /* ResultSliderTableViewCell.swift */; };
+		181DFC251CA2E36E00DFF34D /* MetricTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DFC241CA2E36E00DFF34D /* MetricTableViewCell.swift */; };
+		181DFC271CA5977900DFF34D /* MetricHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181DFC261CA5977900DFF34D /* MetricHeader.xib */; };
+		181DFC291CA597F500DFF34D /* MetricHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DFC281CA597F500DFF34D /* MetricHeaderView.swift */; };
+		181FEDDA1CA000240059ABE1 /* HeaderContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FEDD91CA000240059ABE1 /* HeaderContainerViewController.swift */; };
+		181FEDDC1CA003FC0059ABE1 /* ContainedTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FEDDB1CA003FC0059ABE1 /* ContainedTableViewDataSource.swift */; };
+		181FEDE01CA00B6D0059ABE1 /* DecisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FEDDF1CA00B6D0059ABE1 /* DecisionViewController.swift */; };
+		181FEDE21CA00E7C0059ABE1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FEDE11CA00E7C0059ABE1 /* HomeViewController.swift */; };
+		181FEE0E1CA01A490059ABE1 /* FiraSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEDF61CA0151F0059ABE1 /* FiraSans-Bold.ttf */; };
+		181FEE0F1CA01A490059ABE1 /* FiraSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEDF71CA0151F0059ABE1 /* FiraSans-BoldItalic.ttf */; };
+		181FEE101CA01A490059ABE1 /* FiraSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEDF81CA0151F0059ABE1 /* FiraSans-Italic.ttf */; };
+		181FEE111CA01A490059ABE1 /* FiraSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEDF91CA0151F0059ABE1 /* FiraSans-Light.ttf */; };
+		181FEE121CA01A490059ABE1 /* FiraSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEDFA1CA0151F0059ABE1 /* FiraSans-LightItalic.ttf */; };
+		181FEE131CA01A490059ABE1 /* FiraSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEDFB1CA0151F0059ABE1 /* FiraSans-Medium.ttf */; };
+		181FEE141CA01A490059ABE1 /* FiraSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEDFC1CA0151F0059ABE1 /* FiraSans-MediumItalic.ttf */; };
+		181FEE151CA01A490059ABE1 /* FiraSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEDFD1CA0151F0059ABE1 /* FiraSans-Regular.ttf */; };
+		181FEE161CA01A490059ABE1 /* TitilliumWeb-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEDFF1CA015320059ABE1 /* TitilliumWeb-Black.ttf */; };
+		181FEE171CA01A490059ABE1 /* TitilliumWeb-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE001CA015320059ABE1 /* TitilliumWeb-Bold.ttf */; };
+		181FEE181CA01A490059ABE1 /* TitilliumWeb-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE011CA015320059ABE1 /* TitilliumWeb-BoldItalic.ttf */; };
+		181FEE191CA01A490059ABE1 /* TitilliumWeb-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE021CA015320059ABE1 /* TitilliumWeb-ExtraLight.ttf */; };
+		181FEE1A1CA01A490059ABE1 /* TitilliumWeb-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE031CA015320059ABE1 /* TitilliumWeb-ExtraLightItalic.ttf */; };
+		181FEE1B1CA01A490059ABE1 /* TitilliumWeb-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE041CA015320059ABE1 /* TitilliumWeb-Italic.ttf */; };
+		181FEE1C1CA01A490059ABE1 /* TitilliumWeb-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE051CA015320059ABE1 /* TitilliumWeb-Light.ttf */; };
+		181FEE1D1CA01A490059ABE1 /* TitilliumWeb-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE061CA015320059ABE1 /* TitilliumWeb-LightItalic.ttf */; };
+		181FEE1E1CA01A490059ABE1 /* TitilliumWeb-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE071CA015320059ABE1 /* TitilliumWeb-Regular.ttf */; };
+		181FEE1F1CA01A490059ABE1 /* TitilliumWeb-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE081CA015320059ABE1 /* TitilliumWeb-SemiBold.ttf */; };
+		181FEE201CA01A490059ABE1 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE091CA015320059ABE1 /* TitilliumWeb-SemiBoldItalic.ttf */; };
+		181FEE211CA01A490059ABE1 /* texgyreadventor-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE0A1CA0160C0059ABE1 /* texgyreadventor-bold.otf */; };
+		181FEE221CA01A490059ABE1 /* texgyreadventor-bolditalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE0B1CA0160C0059ABE1 /* texgyreadventor-bolditalic.otf */; };
+		181FEE231CA01A490059ABE1 /* texgyreadventor-italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE0C1CA0160C0059ABE1 /* texgyreadventor-italic.otf */; };
+		181FEE241CA01A490059ABE1 /* texgyreadventor-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE0D1CA0160C0059ABE1 /* texgyreadventor-regular.otf */; };
+		181FEE281CA0210A0059ABE1 /* BackgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FEE271CA0210A0059ABE1 /* BackgroundGradient.swift */; };
+		181FEE2B1CA02E550059ABE1 /* Cassannet Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE291CA02E1D0059ABE1 /* Cassannet Bold.otf */; };
+		181FEE2C1CA02E550059ABE1 /* Cassannet.otf in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE2A1CA02E1D0059ABE1 /* Cassannet.otf */; };
+		181FEE2F1CA02FC60059ABE1 /* JudgeProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE2D1CA02FC50059ABE1 /* JudgeProfile.png */; };
+		181FEE301CA02FC60059ABE1 /* StenographerProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE2E1CA02FC60059ABE1 /* StenographerProfile.png */; };
+		181FEE321CA03B580059ABE1 /* OptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE311CA03B580059ABE1 /* OptionCell.xib */; };
+		181FEE341CA03C1F0059ABE1 /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FEE331CA03C1F0059ABE1 /* OptionTableViewCell.swift */; };
+		181FEE361CA0444B0059ABE1 /* ResultSliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE351CA0444B0059ABE1 /* ResultSliderCell.xib */; };
 		18F0C36A1C75CC150042BCA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C3691C75CC150042BCA3 /* AppDelegate.swift */; };
 		18F0C36C1C75CC150042BCA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C36B1C75CC150042BCA3 /* ViewController.swift */; };
 		18F0C36F1C75CC150042BCA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C36D1C75CC150042BCA3 /* Main.storyboard */; };
@@ -14,6 +59,10 @@
 		18F0C3741C75CC150042BCA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C3721C75CC150042BCA3 /* LaunchScreen.storyboard */; };
 		18F0C37F1C75CC150042BCA3 /* Pocket_JudgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C37E1C75CC150042BCA3 /* Pocket_JudgeTests.swift */; };
 		18F0C38A1C75CC150042BCA3 /* Pocket_JudgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C3891C75CC150042BCA3 /* Pocket_JudgeUITests.swift */; };
+		18F0C3981C75CD690042BCA3 /* Decision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C3971C75CD690042BCA3 /* Decision.swift */; };
+		18FF2DE61CA14B5C00123079 /* brandon_grotesque_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18FF2DE51CA14B5C00123079 /* brandon_grotesque_bold.ttf */; };
+		18FF2DEA1CA166DF00123079 /* PocketJudgeAlertViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FF2DE91CA166DF00123079 /* PocketJudgeAlertViewStyle.swift */; };
+		795C76C8B814ECB3AD259505 /* Pods_Pocket_Judge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBDD15BFD08E78588E4FC7B7 /* Pods_Pocket_Judge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +83,52 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1708C28216CA18952E7ADDEB /* Pods-Pocket Judge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Judge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket Judge/Pods-Pocket Judge.debug.xcconfig"; sourceTree = "<group>"; };
+		1815D09F1CA7E53E00DC89C7 /* BackgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundImage.png; sourceTree = "<group>"; };
+		1815D0A31CA7E7F600DC89C7 /* SentencedOptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SentencedOptionViewController.swift; path = "View controllers/SentencedOptionViewController.swift"; sourceTree = "<group>"; };
+		1815D0A51CA7E88F00DC89C7 /* Judge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Judge.png; sourceTree = "<group>"; };
+		1815D0A61CA7E88F00DC89C7 /* Stenographer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stenographer.png; sourceTree = "<group>"; };
+		181DFC1C1CA2B08000DFF34D /* MetricCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MetricCell.xib; path = Views/MetricCell.xib; sourceTree = "<group>"; };
+		181DFC201CA2D10700DFF34D /* MetricViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MetricViewController.swift; path = "View controllers/MetricViewController.swift"; sourceTree = "<group>"; };
+		181DFC221CA2D2D700DFF34D /* ResultSliderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultSliderTableViewCell.swift; path = Views/ResultSliderTableViewCell.swift; sourceTree = "<group>"; };
+		181DFC241CA2E36E00DFF34D /* MetricTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MetricTableViewCell.swift; path = Views/MetricTableViewCell.swift; sourceTree = "<group>"; };
+		181DFC261CA5977900DFF34D /* MetricHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MetricHeader.xib; path = Views/MetricHeader.xib; sourceTree = "<group>"; };
+		181DFC281CA597F500DFF34D /* MetricHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MetricHeaderView.swift; path = Views/MetricHeaderView.swift; sourceTree = "<group>"; };
+		181FEDD91CA000240059ABE1 /* HeaderContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderContainerViewController.swift; path = "View controllers/HeaderContainerViewController.swift"; sourceTree = "<group>"; };
+		181FEDDB1CA003FC0059ABE1 /* ContainedTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainedTableViewDataSource.swift; path = Helpers/ContainedTableViewDataSource.swift; sourceTree = "<group>"; };
+		181FEDDF1CA00B6D0059ABE1 /* DecisionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DecisionViewController.swift; path = "View controllers/DecisionViewController.swift"; sourceTree = "<group>"; };
+		181FEDE11CA00E7C0059ABE1 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "View controllers/HomeViewController.swift"; sourceTree = "<group>"; };
+		181FEDF61CA0151F0059ABE1 /* FiraSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Bold.ttf"; sourceTree = "<group>"; };
+		181FEDF71CA0151F0059ABE1 /* FiraSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		181FEDF81CA0151F0059ABE1 /* FiraSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Italic.ttf"; sourceTree = "<group>"; };
+		181FEDF91CA0151F0059ABE1 /* FiraSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Light.ttf"; sourceTree = "<group>"; };
+		181FEDFA1CA0151F0059ABE1 /* FiraSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		181FEDFB1CA0151F0059ABE1 /* FiraSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Medium.ttf"; sourceTree = "<group>"; };
+		181FEDFC1CA0151F0059ABE1 /* FiraSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		181FEDFD1CA0151F0059ABE1 /* FiraSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Regular.ttf"; sourceTree = "<group>"; };
+		181FEDFF1CA015320059ABE1 /* TitilliumWeb-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Black.ttf"; sourceTree = "<group>"; };
+		181FEE001CA015320059ABE1 /* TitilliumWeb-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Bold.ttf"; sourceTree = "<group>"; };
+		181FEE011CA015320059ABE1 /* TitilliumWeb-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-BoldItalic.ttf"; sourceTree = "<group>"; };
+		181FEE021CA015320059ABE1 /* TitilliumWeb-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-ExtraLight.ttf"; sourceTree = "<group>"; };
+		181FEE031CA015320059ABE1 /* TitilliumWeb-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		181FEE041CA015320059ABE1 /* TitilliumWeb-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Italic.ttf"; sourceTree = "<group>"; };
+		181FEE051CA015320059ABE1 /* TitilliumWeb-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Light.ttf"; sourceTree = "<group>"; };
+		181FEE061CA015320059ABE1 /* TitilliumWeb-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-LightItalic.ttf"; sourceTree = "<group>"; };
+		181FEE071CA015320059ABE1 /* TitilliumWeb-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Regular.ttf"; sourceTree = "<group>"; };
+		181FEE081CA015320059ABE1 /* TitilliumWeb-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-SemiBold.ttf"; sourceTree = "<group>"; };
+		181FEE091CA015320059ABE1 /* TitilliumWeb-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		181FEE0A1CA0160C0059ABE1 /* texgyreadventor-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "texgyreadventor-bold.otf"; sourceTree = "<group>"; };
+		181FEE0B1CA0160C0059ABE1 /* texgyreadventor-bolditalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "texgyreadventor-bolditalic.otf"; sourceTree = "<group>"; };
+		181FEE0C1CA0160C0059ABE1 /* texgyreadventor-italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "texgyreadventor-italic.otf"; sourceTree = "<group>"; };
+		181FEE0D1CA0160C0059ABE1 /* texgyreadventor-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "texgyreadventor-regular.otf"; sourceTree = "<group>"; };
+		181FEE271CA0210A0059ABE1 /* BackgroundGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundGradient.swift; path = Helpers/BackgroundGradient.swift; sourceTree = "<group>"; };
+		181FEE291CA02E1D0059ABE1 /* Cassannet Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cassannet Bold.otf"; sourceTree = "<group>"; };
+		181FEE2A1CA02E1D0059ABE1 /* Cassannet.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cassannet.otf; sourceTree = "<group>"; };
+		181FEE2D1CA02FC50059ABE1 /* JudgeProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JudgeProfile.png; sourceTree = "<group>"; };
+		181FEE2E1CA02FC60059ABE1 /* StenographerProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StenographerProfile.png; sourceTree = "<group>"; };
+		181FEE311CA03B580059ABE1 /* OptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OptionCell.xib; path = Views/OptionCell.xib; sourceTree = "<group>"; };
+		181FEE331CA03C1F0059ABE1 /* OptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionTableViewCell.swift; path = Views/OptionTableViewCell.swift; sourceTree = "<group>"; };
+		181FEE351CA0444B0059ABE1 /* ResultSliderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultSliderCell.xib; path = Views/ResultSliderCell.xib; sourceTree = "<group>"; };
 		18F0C3661C75CC150042BCA3 /* Pocket Judge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Judge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F0C3691C75CC150042BCA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18F0C36B1C75CC150042BCA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +142,11 @@
 		18F0C3851C75CC150042BCA3 /* Pocket JudgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pocket JudgeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F0C3891C75CC150042BCA3 /* Pocket_JudgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocket_JudgeUITests.swift; sourceTree = "<group>"; };
 		18F0C38B1C75CC150042BCA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18F0C3971C75CD690042BCA3 /* Decision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Decision.swift; path = Models/Decision.swift; sourceTree = "<group>"; };
+		18FF2DE51CA14B5C00123079 /* brandon_grotesque_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = brandon_grotesque_bold.ttf; sourceTree = "<group>"; };
+		18FF2DE91CA166DF00123079 /* PocketJudgeAlertViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PocketJudgeAlertViewStyle.swift; path = Helpers/PocketJudgeAlertViewStyle.swift; sourceTree = "<group>"; };
+		D414A0A81777D1A8820730B1 /* Pods-Pocket Judge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Judge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket Judge/Pods-Pocket Judge.release.xcconfig"; sourceTree = "<group>"; };
+		EBDD15BFD08E78588E4FC7B7 /* Pods_Pocket_Judge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_Judge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				795C76C8B814ECB3AD259505 /* Pods_Pocket_Judge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +175,87 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181DFC2A1CA7D45300DFF34D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				181FEE311CA03B580059ABE1 /* OptionCell.xib */,
+				181DFC1C1CA2B08000DFF34D /* MetricCell.xib */,
+				181DFC261CA5977900DFF34D /* MetricHeader.xib */,
+				181DFC281CA597F500DFF34D /* MetricHeaderView.swift */,
+				181FEE331CA03C1F0059ABE1 /* OptionTableViewCell.swift */,
+				181DFC241CA2E36E00DFF34D /* MetricTableViewCell.swift */,
+				181FEE351CA0444B0059ABE1 /* ResultSliderCell.xib */,
+				181DFC221CA2D2D700DFF34D /* ResultSliderTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		181DFC2B1CA7D46800DFF34D /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18FF2DE91CA166DF00123079 /* PocketJudgeAlertViewStyle.swift */,
+				18F0C36B1C75CC150042BCA3 /* ViewController.swift */,
+				181FEDE11CA00E7C0059ABE1 /* HomeViewController.swift */,
+				181FEDDF1CA00B6D0059ABE1 /* DecisionViewController.swift */,
+				181DFC201CA2D10700DFF34D /* MetricViewController.swift */,
+				1815D0A31CA7E7F600DC89C7 /* SentencedOptionViewController.swift */,
+			);
+			name = "View controllers";
+			sourceTree = "<group>";
+		};
+		181DFC2C1CA7D47400DFF34D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				181FEE271CA0210A0059ABE1 /* BackgroundGradient.swift */,
+				181FEDD91CA000240059ABE1 /* HeaderContainerViewController.swift */,
+				181FEDDB1CA003FC0059ABE1 /* ContainedTableViewDataSource.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		181FEDFE1CA015220059ABE1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				181FEDF61CA0151F0059ABE1 /* FiraSans-Bold.ttf */,
+				181FEDF71CA0151F0059ABE1 /* FiraSans-BoldItalic.ttf */,
+				181FEDF81CA0151F0059ABE1 /* FiraSans-Italic.ttf */,
+				181FEDF91CA0151F0059ABE1 /* FiraSans-Light.ttf */,
+				181FEDFA1CA0151F0059ABE1 /* FiraSans-LightItalic.ttf */,
+				181FEDFB1CA0151F0059ABE1 /* FiraSans-Medium.ttf */,
+				181FEDFC1CA0151F0059ABE1 /* FiraSans-MediumItalic.ttf */,
+				181FEDFD1CA0151F0059ABE1 /* FiraSans-Regular.ttf */,
+				181FEDFF1CA015320059ABE1 /* TitilliumWeb-Black.ttf */,
+				181FEE001CA015320059ABE1 /* TitilliumWeb-Bold.ttf */,
+				181FEE011CA015320059ABE1 /* TitilliumWeb-BoldItalic.ttf */,
+				181FEE021CA015320059ABE1 /* TitilliumWeb-ExtraLight.ttf */,
+				181FEE031CA015320059ABE1 /* TitilliumWeb-ExtraLightItalic.ttf */,
+				181FEE041CA015320059ABE1 /* TitilliumWeb-Italic.ttf */,
+				181FEE051CA015320059ABE1 /* TitilliumWeb-Light.ttf */,
+				181FEE061CA015320059ABE1 /* TitilliumWeb-LightItalic.ttf */,
+				181FEE071CA015320059ABE1 /* TitilliumWeb-Regular.ttf */,
+				181FEE081CA015320059ABE1 /* TitilliumWeb-SemiBold.ttf */,
+				181FEE091CA015320059ABE1 /* TitilliumWeb-SemiBoldItalic.ttf */,
+				181FEE0A1CA0160C0059ABE1 /* texgyreadventor-bold.otf */,
+				181FEE0B1CA0160C0059ABE1 /* texgyreadventor-bolditalic.otf */,
+				181FEE0C1CA0160C0059ABE1 /* texgyreadventor-italic.otf */,
+				181FEE0D1CA0160C0059ABE1 /* texgyreadventor-regular.otf */,
+				181FEE291CA02E1D0059ABE1 /* Cassannet Bold.otf */,
+				181FEE2A1CA02E1D0059ABE1 /* Cassannet.otf */,
+				18FF2DE51CA14B5C00123079 /* brandon_grotesque_bold.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		18F0C35D1C75CC150042BCA3 = {
 			isa = PBXGroup;
 			children = (
+				181FEDFE1CA015220059ABE1 /* Fonts */,
 				18F0C3681C75CC150042BCA3 /* Pocket Judge */,
 				18F0C37D1C75CC150042BCA3 /* Pocket JudgeTests */,
 				18F0C3881C75CC150042BCA3 /* Pocket JudgeUITests */,
 				18F0C3671C75CC150042BCA3 /* Products */,
+				3C150C3921A68CF05EC6FCF4 /* Pods */,
+				288448B745486B2C8F1D3450 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +272,16 @@
 		18F0C3681C75CC150042BCA3 /* Pocket Judge */ = {
 			isa = PBXGroup;
 			children = (
+				181FEE2D1CA02FC50059ABE1 /* JudgeProfile.png */,
+				181FEE2E1CA02FC60059ABE1 /* StenographerProfile.png */,
+				1815D09F1CA7E53E00DC89C7 /* BackgroundImage.png */,
+				1815D0A51CA7E88F00DC89C7 /* Judge.png */,
+				1815D0A61CA7E88F00DC89C7 /* Stenographer.png */,
 				18F0C3691C75CC150042BCA3 /* AppDelegate.swift */,
-				18F0C36B1C75CC150042BCA3 /* ViewController.swift */,
+				181DFC2C1CA7D47400DFF34D /* Helpers */,
+				181DFC2B1CA7D46800DFF34D /* View controllers */,
+				181DFC2A1CA7D45300DFF34D /* Views */,
+				18F0C3971C75CD690042BCA3 /* Decision.swift */,
 				18F0C36D1C75CC150042BCA3 /* Main.storyboard */,
 				18F0C3701C75CC150042BCA3 /* Assets.xcassets */,
 				18F0C3721C75CC150042BCA3 /* LaunchScreen.storyboard */,
@@ -125,6 +308,23 @@
 			path = "Pocket JudgeUITests";
 			sourceTree = "<group>";
 		};
+		288448B745486B2C8F1D3450 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBDD15BFD08E78588E4FC7B7 /* Pods_Pocket_Judge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C150C3921A68CF05EC6FCF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1708C28216CA18952E7ADDEB /* Pods-Pocket Judge.debug.xcconfig */,
+				D414A0A81777D1A8820730B1 /* Pods-Pocket Judge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +332,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18F0C38E1C75CC150042BCA3 /* Build configuration list for PBXNativeTarget "Pocket Judge" */;
 			buildPhases = (
+				05D192068AF5FB4570ADD1B7 /* Check Pods Manifest.lock */,
 				18F0C3621C75CC150042BCA3 /* Sources */,
 				18F0C3631C75CC150042BCA3 /* Frameworks */,
 				18F0C3641C75CC150042BCA3 /* Resources */,
+				4E1ADCF19AB0274F2F504666 /* Embed Pods Frameworks */,
+				04BC2060EE23B2E0C2E35A17 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,9 +432,44 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181FEE0E1CA01A490059ABE1 /* FiraSans-Bold.ttf in Resources */,
+				181FEE0F1CA01A490059ABE1 /* FiraSans-BoldItalic.ttf in Resources */,
+				181FEE321CA03B580059ABE1 /* OptionCell.xib in Resources */,
+				18FF2DE61CA14B5C00123079 /* brandon_grotesque_bold.ttf in Resources */,
+				181FEE101CA01A490059ABE1 /* FiraSans-Italic.ttf in Resources */,
+				1815D0A01CA7E53E00DC89C7 /* BackgroundImage.png in Resources */,
+				181FEE111CA01A490059ABE1 /* FiraSans-Light.ttf in Resources */,
+				181FEE121CA01A490059ABE1 /* FiraSans-LightItalic.ttf in Resources */,
+				181FEE131CA01A490059ABE1 /* FiraSans-Medium.ttf in Resources */,
+				181FEE361CA0444B0059ABE1 /* ResultSliderCell.xib in Resources */,
+				181FEE141CA01A490059ABE1 /* FiraSans-MediumItalic.ttf in Resources */,
+				181FEE151CA01A490059ABE1 /* FiraSans-Regular.ttf in Resources */,
+				181FEE2F1CA02FC60059ABE1 /* JudgeProfile.png in Resources */,
+				181FEE301CA02FC60059ABE1 /* StenographerProfile.png in Resources */,
+				181FEE161CA01A490059ABE1 /* TitilliumWeb-Black.ttf in Resources */,
+				181FEE171CA01A490059ABE1 /* TitilliumWeb-Bold.ttf in Resources */,
+				181DFC271CA5977900DFF34D /* MetricHeader.xib in Resources */,
+				181FEE181CA01A490059ABE1 /* TitilliumWeb-BoldItalic.ttf in Resources */,
+				181FEE191CA01A490059ABE1 /* TitilliumWeb-ExtraLight.ttf in Resources */,
+				181FEE1A1CA01A490059ABE1 /* TitilliumWeb-ExtraLightItalic.ttf in Resources */,
+				181FEE1B1CA01A490059ABE1 /* TitilliumWeb-Italic.ttf in Resources */,
+				181FEE1C1CA01A490059ABE1 /* TitilliumWeb-Light.ttf in Resources */,
+				181FEE1D1CA01A490059ABE1 /* TitilliumWeb-LightItalic.ttf in Resources */,
+				181FEE1E1CA01A490059ABE1 /* TitilliumWeb-Regular.ttf in Resources */,
+				181FEE1F1CA01A490059ABE1 /* TitilliumWeb-SemiBold.ttf in Resources */,
+				181FEE201CA01A490059ABE1 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */,
+				181FEE211CA01A490059ABE1 /* texgyreadventor-bold.otf in Resources */,
+				181FEE221CA01A490059ABE1 /* texgyreadventor-bolditalic.otf in Resources */,
+				181FEE231CA01A490059ABE1 /* texgyreadventor-italic.otf in Resources */,
+				181FEE241CA01A490059ABE1 /* texgyreadventor-regular.otf in Resources */,
+				181FEE2B1CA02E550059ABE1 /* Cassannet Bold.otf in Resources */,
+				1815D0A81CA7E88F00DC89C7 /* Stenographer.png in Resources */,
+				181FEE2C1CA02E550059ABE1 /* Cassannet.otf in Resources */,
 				18F0C3741C75CC150042BCA3 /* LaunchScreen.storyboard in Resources */,
+				181DFC1D1CA2B08000DFF34D /* MetricCell.xib in Resources */,
 				18F0C3711C75CC150042BCA3 /* Assets.xcassets in Resources */,
 				18F0C36F1C75CC150042BCA3 /* Main.storyboard in Resources */,
+				1815D0A71CA7E88F00DC89C7 /* Judge.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +489,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04BC2060EE23B2E0C2E35A17 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pocket Judge/Pods-Pocket Judge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		05D192068AF5FB4570ADD1B7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4E1ADCF19AB0274F2F504666 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pocket Judge/Pods-Pocket Judge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18F0C3621C75CC150042BCA3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181FEDDC1CA003FC0059ABE1 /* ContainedTableViewDataSource.swift in Sources */,
+				181FEE281CA0210A0059ABE1 /* BackgroundGradient.swift in Sources */,
 				18F0C36C1C75CC150042BCA3 /* ViewController.swift in Sources */,
+				181DFC231CA2D2D700DFF34D /* ResultSliderTableViewCell.swift in Sources */,
+				181FEDDA1CA000240059ABE1 /* HeaderContainerViewController.swift in Sources */,
+				181DFC251CA2E36E00DFF34D /* MetricTableViewCell.swift in Sources */,
 				18F0C36A1C75CC150042BCA3 /* AppDelegate.swift in Sources */,
+				181FEE341CA03C1F0059ABE1 /* OptionTableViewCell.swift in Sources */,
+				1815D0A41CA7E7F700DC89C7 /* SentencedOptionViewController.swift in Sources */,
+				181FEDE01CA00B6D0059ABE1 /* DecisionViewController.swift in Sources */,
+				181FEDE21CA00E7C0059ABE1 /* HomeViewController.swift in Sources */,
+				18F0C3981C75CD690042BCA3 /* Decision.swift in Sources */,
+				181DFC291CA597F500DFF34D /* MetricHeaderView.swift in Sources */,
+				181DFC211CA2D10700DFF34D /* MetricViewController.swift in Sources */,
+				18FF2DEA1CA166DF00123079 /* PocketJudgeAlertViewStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +694,7 @@
 		};
 		18F0C38F1C75CC150042BCA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1708C28216CA18952E7ADDEB /* Pods-Pocket Judge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Pocket Judge/Info.plist";
@@ -406,6 +706,7 @@
 		};
 		18F0C3901C75CC150042BCA3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D414A0A81777D1A8820730B1 /* Pods-Pocket Judge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Pocket Judge/Info.plist";
@@ -482,6 +783,7 @@
 				18F0C3901C75CC150042BCA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18F0C3911C75CC150042BCA3 /* Build configuration list for PBXNativeTarget "Pocket JudgeTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +792,7 @@
 				18F0C3931C75CC150042BCA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18F0C3941C75CC150042BCA3 /* Build configuration list for PBXNativeTarget "Pocket JudgeUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +801,7 @@
 				18F0C3961C75CC150042BCA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

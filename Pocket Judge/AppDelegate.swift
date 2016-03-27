@@ -13,9 +13,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        UINavigationBar.appearance().translucent = false
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().barTintColor = UIColor(hex: "f6b783")
+        let appearanceShadow = NSShadow()
+        appearanceShadow.shadowBlurRadius = 0.0
+        appearanceShadow.shadowColor = nil
+        appearanceShadow.shadowOffset = CGSizeZero
+        
+        let commonAttributes = [
+            NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSShadowAttributeName: appearanceShadow,
+            NSFontAttributeName: UIFont(name: "TeXGyreAdventor-Bold", size: 19.0)!
+        ]
+        
+        UINavigationBar.appearance().titleTextAttributes = commonAttributes
+        UIBarButtonItem.appearanceWhenContainedInInstancesOfClasses([UINavigationBar.self]).setTitleTextAttributes(commonAttributes, forState: .Normal)
+        
+        
+        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
         return true
     }
 

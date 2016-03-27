@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,8 +16,36 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="jmL-5u-fCB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ric-IP-4CF">
+                                <rect key="frame" x="238" y="107" width="125" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="Aks-K0-Hq5"/>
+                                    <constraint firstAttribute="width" constant="125" id="hbT-Zg-UST"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoText" translatesAutoresizingMaskIntoConstraints="NO" id="UeC-Xs-9Ef">
+                                <rect key="frame" x="210" y="493" width="180" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DdE-io-x6d"/>
+                                    <constraint firstAttribute="width" constant="180" id="aDb-34-d04"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ric-IP-4CF" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="87" id="38g-a7-vyE"/>
+                            <constraint firstItem="jmL-5u-fCB" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="7Z3-U3-POg"/>
+                            <constraint firstItem="ric-IP-4CF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9yE-qh-2qp"/>
+                            <constraint firstItem="jmL-5u-fCB" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="FP9-ra-EGn"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="UeC-Xs-9Ef" secondAttribute="bottom" constant="67" id="IbL-BA-OCs"/>
+                            <constraint firstItem="jmL-5u-fCB" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="PY4-bi-eGl"/>
+                            <constraint firstItem="jmL-5u-fCB" firstAttribute="centerX" secondItem="ric-IP-4CF" secondAttribute="centerX" id="acb-XL-tfO"/>
+                            <constraint firstItem="UeC-Xs-9Ef" firstAttribute="centerX" secondItem="ric-IP-4CF" secondAttribute="centerX" id="jBB-vt-Z61"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +53,9 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BackgroundImage.png" width="350" height="593"/>
+        <image name="Logo" width="62" height="62"/>
+        <image name="LogoText" width="90" height="20"/>
+    </resources>
 </document>

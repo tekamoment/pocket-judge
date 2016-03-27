@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OptionCell" id="LJc-yc-zaH" customClass="OptionTableViewCell" customModule="Pocket_Judge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="329" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LJc-yc-zaH" id="mw0-2x-4GM">
+                <rect key="frame" x="0.0" y="0.0" width="329" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Di-vc-vac">
+                        <rect key="frame" x="282" y="10" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="Hiy-Bx-H5b"/>
+                            <constraint firstAttribute="width" constant="25" id="IVG-v5-O68"/>
+                        </constraints>
+                        <state key="normal" image="TrashIcon"/>
+                        <connections>
+                            <action selector="trashButtonTapped:" destination="LJc-yc-zaH" eventType="touchUpInside" id="16h-YN-Ohy"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAJ-za-W4N">
+                        <rect key="frame" x="29" y="11" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.95294117647058818" green="0.89411764705882346" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="8Di-vc-vac" firstAttribute="top" secondItem="mw0-2x-4GM" secondAttribute="topMargin" constant="2" id="BjA-FQ-zU2"/>
+                    <constraint firstItem="wAJ-za-W4N" firstAttribute="leading" secondItem="mw0-2x-4GM" secondAttribute="leadingMargin" constant="21" id="NZu-BQ-C4p"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="8Di-vc-vac" secondAttribute="bottom" constant="0.5" id="k5N-cC-Cz5"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="8Di-vc-vac" secondAttribute="trailing" constant="14" id="nNG-Ld-W2r"/>
+                    <constraint firstItem="wAJ-za-W4N" firstAttribute="centerY" secondItem="mw0-2x-4GM" secondAttribute="centerY" id="qs1-BR-irM"/>
+                    <constraint firstItem="wAJ-za-W4N" firstAttribute="top" secondItem="mw0-2x-4GM" secondAttribute="topMargin" constant="3" id="tBf-Fs-HAw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="optionTitleLabel" destination="wAJ-za-W4N" id="CrM-l8-rGC"/>
+            </connections>
+            <point key="canvasLocation" x="226.5" y="421"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="TrashIcon" width="25" height="25"/>
+    </resources>
+</document>
