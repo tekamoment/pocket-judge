@@ -54,11 +54,18 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
         }
         
         // view stuff
-        
         headerTitleView.text = decision?.name
         view.layer.insertSublayer(CAGradientLayer.pocketJudgeBackgroundGradientLayer(view.bounds), atIndex: 0)
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Evaluate", style: .Plain, target: nil, action: nil)
         valueSlider.continuous = false
+        metricIndicatorControl.userInteractionEnabled = false
+        
+        // requisite bar button items
+        var buttonItems = [UIBarButtonItem]()
+        buttonItems.append(UIBarButtonItem(image: UIImage(named: "ResultIcon"), style: .Plain, target: self, action: #selector(calculateDecisions)))
+        buttonItems.append(UIBarButtonItem(image: UIImage(named: "ResetIcon"), style: .Plain, target: self, action: #selector(resetCurrentMetric)))
+        self.navigationItem.rightBarButtonItems = buttonItems
+
         
         // setting up the tableviewcontroller
         
@@ -205,6 +212,14 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
         
         // change the indicator
         metricIndicatorControl.currentPage = pageNumber
+    }
+    
+    func resetCurrentMetric() {
+        
+    }
+    
+    func calculateDecisions() {
+        
     }
     
     @IBAction func sliderValueChanged(sender: UISlider) {
