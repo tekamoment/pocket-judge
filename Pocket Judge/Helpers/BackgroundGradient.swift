@@ -12,7 +12,7 @@ public extension CAGradientLayer {
     class func pocketJudgeBackgroundGradientLayer(frame: CGRect) -> CAGradientLayer {
         let gradient = CAGradientLayer()
         gradient.frame = frame
-        gradient.colors = [UIColor(hex: "f8b780").CGColor, UIColor(hex: "f69880").CGColor]
+        gradient.colors = [UIColor(hex: "f8b780").CGColor, UIColor(hex: "f69880").CGColor].reverse()
         gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
         return gradient

@@ -11,7 +11,7 @@ import RealmSwift
 
 import SDCAlertView
 
-class DecisionViewController: HeaderContainerViewController, UITextViewDelegate, UITableViewDelegate {
+class DecisionViewController: HeaderContainerViewController, UITextViewDelegate, UITableViewDelegate, OptionTableViewCellDelegate {
     let realm = try! Realm()
     var decision: Decision?
     var decisionState: DecisionState? {
@@ -25,10 +25,11 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
             switch newDecisionState! {
             case .OptionsState:
                 buttonItems.append(UIBarButtonItem(image: UIImage(named: "InformationIcon"), style: .Plain, target: self, action: #selector(DecisionViewController.informationIconTapped)))
-                fallthrough
+                buttonItems.append(UIBarButtonItem(image: UIImage(named: "SliderIcon"), style: .Plain, target: self, action: #selector(DecisionViewController.sliderIconTapped)))
+                break
             
             case .ExistingDecisionsState:
-                buttonItems.append(UIBarButtonItem(image: UIImage(named: "SliderIcon"), style: .Plain, target: self, action: #selector(DecisionViewController.sliderIconTapped)))
+                buttonItems.append(UIBarButtonItem(image: UIImage(named: "InformationIcon"), style: .Plain, target: self, action: #selector(DecisionViewController.informationIconTapped)))
             }
             
             self.navigationItem.rightBarButtonItems = buttonItems
@@ -65,7 +66,14 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        headerTitleView.text = decision!.name.uppercaseString
+        
+        if decisionState! == .OptionsState {
+            headerTitleView.text = decision!.name.uppercaseString
+        } else {
+            headerTitleView.text = "OLD DECISIONS"
+            headerTitleView.userInteractionEnabled = false
+        }
+        
         characterImageView.image = UIImage(named: headerImageName)!
         
         decisionsTableController = UITableViewController(style: .Plain)
@@ -75,9 +83,8 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
 //        decisionsTableController!.view.frame = containerView.frame
         decisionsTableController!.view.frame = CGRect(x: 0, y: 0, width: containerView.frame.width, height: containerView.frame.height)
         decisionsTableController!.didMoveToParentViewController(self)
-        
-        decisionsTableController!.tableView.registerNib(UINib(nibName: "OptionCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "OptionCell")
         decisionsTableController!.tableView.registerNib(UINib(nibName: "MetricHeader", bundle: NSBundle.mainBundle()), forHeaderFooterViewReuseIdentifier: "OptionFooter")
+        decisionsTableController!.tableView.registerNib(UINib(nibName: "OptionCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "OptionCell")
         
         decisionsTableController!.tableView.rowHeight = UITableViewAutomaticDimension
         decisionsTableController!.tableView.estimatedRowHeight = 50
@@ -90,6 +97,11 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
         setUpTableView()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        headerTitleView.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.New, context: nil)
+        decisionsTableController!.tableView.reloadData()
+    }
 
     func setUpTableView() {
         switch decisionState! {
@@ -99,11 +111,13 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
                 optCell.optionTitleLabel.text = opt.name.uppercaseString
                 optCell.decisionState = .OptionsState
                 optCell.cellIndex = indexPath.row
-                optCell.editNameButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.editOptionNameButtonTapped)))
+                optCell.delegate = self
+                optCell.layoutMargins = UIEdgeInsetsZero
                 return optCell
             })
             tableViewDataSource = optionsTableSource
             decisionsTableController!.tableView.dataSource = tableViewDataSource!
+            decisionsTableController!.tableView.separatorColor = UIColor(hex: "f3e4cc")
             break
             
         default:
@@ -112,21 +126,22 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
                 decCell.optionTitleLabel.text = dec.name.uppercaseString
                 decCell.decisionState = .ExistingDecisionsState
                 decCell.cellIndex = indexPath.row
+                decCell.layoutMargins = UIEdgeInsetsZero
+                decCell.delegate = self
                 return decCell
             })
             tableViewDataSource = decisionsTableSource
             decisionsTableController!.tableView.dataSource = tableViewDataSource
+            decisionsTableController!.tableView.separatorColor = UIColor(hex: "f6b783")
             break
         }
         
         decisionsTableController!.tableView.delegate = self
         
-        guard decisionsTableController!.tableView.dataSource != nil else {
-            print("datasource was not assigned.")
-            return
-        }
+        decisionsTableController!.tableView.backgroundColor = UIColor.clearColor()
         
-        decisionsTableController!.tableView.separatorColor = UIColor.clearColor()
+        
+        decisionsTableController!.tableView.layoutMargins = UIEdgeInsetsZero
         
         decisionsTableController!.tableView.reloadData()
     }
@@ -154,11 +169,16 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
             message = "Click on any decision to view the results or to re-appraise a previous decision!"
         }
         
-        AlertController.pocketJudgeAlertController(header, message: message).present()
+        let informationAlertController = UIAlertController(title: header, message: message, preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (_) in }
+        informationAlertController.addAction(cancelAction)
+        presentViewController(informationAlertController, animated: true, completion: nil)
     }
     
     func sliderIconTapped() {
         // segue
+        let source = tableViewDataSource as! ContainedTableViewDataSourceList<Option>
+        performSegueWithIdentifier("showMetricsSegue", sender: source.items[0])
     }
     
     func textViewDidEndEditing(textView: UITextView) {
@@ -166,15 +186,29 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
             if textView.text == "" {
                 textView.text = decision!.name
             } else {
-                decision!.name = textView.text.uppercaseString
+                do {
+                    try realm.write({
+                        decision!.name = textView.text.uppercaseString
+                    })
+                } catch {
+                    print("Welp, an error occurred.")
+                }
             }
         }
-        print("Decision name changed. Name is now \(decision!.name)")
+        textView.text = decision!.name
+    }
+    
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false
+        }
+        
+        return true
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("selected row: \(indexPath)")
-        
+
         switch decisionState! {
         case .OptionsState:
             let source = tableViewDataSource as! ContainedTableViewDataSourceList<Option>
@@ -183,13 +217,22 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
             
         default:
             let source = tableViewDataSource as! ContainedTableViewDataSourceResults<Decision>
-            performSegueWithIdentifier("showMetricsSegue", sender: source.items[indexPath.row])
-            // WRONG SEGUE
+            let destination = self.storyboard!.instantiateViewControllerWithIdentifier("DecisionViewController") as! DecisionViewController
+            destination.decision = source.items[indexPath.row]
+            destination.decisionState = .OptionsState
+//            presentViewController(destination, animated: true, completion: nil)
+            navigationItem.backBarButtonItem = UIBarButtonItem(title: "Archive", style: .Plain, target: nil, action: nil)
+            self.navigationController!.pushViewController(destination, animated: true)
+            
             break
         }
     }
     
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        guard decisionState! == .OptionsState else {
+            return nil
+        }
+        
         let footer = tableView.dequeueReusableHeaderFooterViewWithIdentifier("OptionFooter") as! MetricHeaderView
         // set background color to clear
         footer.imageView.image = UIImage(named: "PlusIcon")
@@ -200,8 +243,6 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
     }
     
     func newOptionTapped() {
-        print("WOOH NEW OPTION")
-        
         let newOptionAlertController = UIAlertController(title: "New Decision", message: "Enter the name of your decision's new option.", preferredStyle: .Alert)
         
         let saveNameAction = UIAlertAction(title: "OK", style: .Default) { (_) in
@@ -242,7 +283,11 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 45.0
+        if decisionState! == .OptionsState {
+            return 45.0
+        } else {
+            return 0.0
+        }
     }
     
     
@@ -266,8 +311,59 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
     // OptionTableViewCellDelegate methods
     func trashButtonTapped(cellIndex: Int) {
         // trash a decision/option
+        var trashTitle: String
         
-        // are you sure you want to delete?
+        switch decisionState! {
+        case .OptionsState:
+            // make sure mroe than 2
+            let source = tableViewDataSource as! ContainedTableViewDataSourceList<Option>
+            guard source.items.count > 2 else {
+                let trashOption = UIAlertController(title: "Too few options", message: "You cannot delete any more options.", preferredStyle: .Alert)
+                
+                let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (_) in }
+                
+                trashOption.addAction(cancelAction)
+                
+                presentViewController(trashOption, animated: true, completion: nil)
+                return
+            }
+            
+            trashTitle = "Are you sure you want to delete this option?"
+        case .ExistingDecisionsState:
+            trashTitle = "Are you sure you want to delete this decision?"
+        }
+        
+        let trashOption = UIAlertController(title: "Delete", message: trashTitle, preferredStyle: .Alert)
+        
+        let deleteAction = UIAlertAction(title: "Delete", style: .Destructive) { (_) in
+            self.deleteAtIndex(cellIndex)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (_) in }
+        
+        trashOption.addAction(deleteAction)
+        trashOption.addAction(cancelAction)
+        
+        presentViewController(trashOption, animated: true, completion: nil)
+    }
+    
+    func deleteAtIndex(index: Int) {
+        switch decisionState! {
+        case .OptionsState:
+            try! realm.write({ 
+                realm.delete(decision!.options[index])
+            })
+        case .ExistingDecisionsState:
+            let source = tableViewDataSource as! ContainedTableViewDataSourceResults<Decision>
+            try! realm.write({ 
+                realm.delete(source.items[index])
+            })
+            if source.items.count == 0 {
+                navigationController?.popViewControllerAnimated(true)
+            }
+        }
+        
+        decisionsTableController!.tableView.reloadData()
     }
     
     func editNameButtonTapped(cellIndex: Int) {
@@ -278,7 +374,9 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
             let newNameTextField = editName.textFields![0] as UITextField
             self.changeName(newNameTextField, indexSelected: cellIndex)
         }
-        changeNameAction.enabled = false
+        changeNameAction.enabled = true
+        // remember to set it to true
+        
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (_) in }
         
@@ -300,10 +398,26 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
             return
         }
         
+        try! realm.write({ 
+            source.items[indexSelected].name = textField.text!
+        })
+        
+        decisionsTableController!.tableView.reloadData()
         // update to Realm
         // reload data
     }
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        let textView = object as! UITextView
+        var top = (textView.bounds.size.height - textView.contentSize.height * textView.zoomScale) / 2.0
+        top = top < 0.0 ? 0.0 : top
+        textView.contentInset = UIEdgeInsetsMake(top, 0, 0, 0)
+    }
 
+    
+    override func viewWillDisappear(animated: Bool) {
+        headerTitleView.removeObserver(self, forKeyPath: "contentSize")
+    }
 }
 
 enum DecisionState {

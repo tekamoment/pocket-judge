@@ -15,11 +15,7 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
     // going to involve delegation
     let realm = try! Realm()
     
-    var decision: Decision? {
-        didSet {
-            print("Decision passed in: \(decision!)")
-        }
-    }
+    var decision: Decision?
     var option: Option?
     
     let possibleMetricCategories = ["Preference", "Duration", "Certainty", "Closeness", "Productiveness", "Cost", "Social"]
@@ -49,16 +45,10 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
         super.viewDidLoad()
         
         // generate all metrics
-        for metric in option!.metrics {
-            if let _ = processedMetrics[metric.type.metricCategory] {
-                processedMetrics[metric.type.metricCategory]!.append(metric)
-            } else {
-                processedMetrics[metric.type.metricCategory] = [metric]
-            }
-        }
+        generateMetrics()
         
         // view stuff
-        headerTitleView.text = decision?.name
+        headerTitleView.text = decision?.name.uppercaseString
         view.layer.insertSublayer(CAGradientLayer.pocketJudgeBackgroundGradientLayer(view.bounds), atIndex: 0)
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Evaluate", style: .Plain, target: nil, action: nil)
         valueSlider.continuous = false
@@ -92,15 +82,36 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
         metricsTableController!.tableView.estimatedRowHeight = 100
         metricsTableController!.tableView.backgroundColor = UIColor.clearColor()
         metricsTableController!.tableView.separatorColor = UIColor.clearColor()
+//        metricsTableController!.tableView.showsVerticalScrollIndicator     
         
         //// delegate and datasouce
         metricsTableController!.tableView.dataSource = self
         metricsTableController!.tableView.delegate = self
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        headerTitleView.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.New, context: nil)
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
        refreshSelectedRowForOptionChange()
+    }
+    
+    func generateMetrics() {
+        processedMetrics = [String: [Metric]]()
+        
+        for metric in option!.metrics {
+            if let _ = processedMetrics[metric.type.metricCategory] {
+                processedMetrics[metric.type.metricCategory]!.append(metric)
+            } else {
+                processedMetrics[metric.type.metricCategory] = [metric]
+            }
+        }
+        
+        print("After generating metrics:")
+        print("\(processedMetrics)")
     }
     
     func refreshInnerValues() {
@@ -133,6 +144,7 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
         
         let indexOfRequestedOption = indexOfCurrentOption - 1
         option = decision!.options[indexOfRequestedOption]
+        generateMetrics()
         refreshInnerValues()
         refreshSelectedRowForOptionChange()
     }
@@ -145,6 +157,7 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
         
         let indexOfRequestedOption = indexOfCurrentOption + 1
         option = decision!.options[indexOfRequestedOption]
+        generateMetrics()
         refreshInnerValues()
         refreshSelectedRowForOptionChange()
     }
@@ -197,7 +210,10 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
         default: break
         }
         
-        AlertController.pocketJudgeAlertController(header, message: message).present()
+        let informationAlertController = UIAlertController(title: header, message: message, preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (_) in }
+        informationAlertController.addAction(cancelAction)
+        presentViewController(informationAlertController, animated: true, completion: nil)
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -222,6 +238,7 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // update the active metric
         activeMetric = processedMetrics[possibleMetricCategories[indexPath.section]]![indexPath.row]
+        print("Active metric is: \(activeMetric)")
         
         let metricBounds = activeMetric!.type.maximumMinimum()
         let metricMin = metricBounds.0
@@ -242,7 +259,12 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
             valueSlider.maximumValue = metricMax
         }
         
-        valueSlider.value = activeMetric!.value!
+        if activeMetric!.type.metricCategory == "Cost" {
+            valueSlider.value = (activeMetric!.value! / -1.0) + activeMetric!.type.maximumMinimum().0
+        } else {
+            valueSlider.value = activeMetric!.value!
+        }
+        
         
         // change labels
         var minLabel = ""
@@ -277,27 +299,43 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
         let metricMin = metricBounds.0
         let metricMax = metricBounds.1
 
-        activeMetric!.setMetricValue((metricMax + metricMin) / 2.0)
+        writeMetricUpdate((metricMax + metricMin) / 2.0)
         
         valueSlider.value = activeMetric!.value!
     }
     
     func calculateDecisions() {
+        for opt in decision!.options {
+            if opt.computeAggregatedValue() == nil {
+                // present here
+                let noExistingDecisionsController = UIAlertController(title: "Incomplete metrics", message: "The option \(opt.name.uppercaseString) does not have completed metrics.", preferredStyle: .Alert)
+                let cancelAction = UIAlertAction(title: "OK", style: .Cancel, handler: { (_) in })
+                noExistingDecisionsController.addAction(cancelAction)
+                presentViewController(noExistingDecisionsController, animated: true, completion: nil)
+                return
+            }
+        }
+        
+        let sentencedController = storyboard!.instantiateViewControllerWithIdentifier("SentencedOptionController") as! SentencedOptionViewController
+        sentencedController.decision = decision!
+        sentencedController.holdingController = self
+        
+        self.navigationController!.presentViewController(sentencedController, animated: true) { 
+            self.performSegueWithIdentifier("showResultsSegue", sender: nil)
+        }
         
     }
     
     @IBAction func sliderValueChanged(sender: UISlider) {
-        // fetch current metric
         var newValue = sender.value
         
         if activeMetric!.type.metricCategory == "Cost" && newValue > 0.0 {
-            // absolute value
             newValue = (sender.value - activeMetric!.type.maximumMinimum().0) * -1.0
-            print("Cost original: \(sender.value) and scaled: \(newValue)")
         }
         
+        
         writeMetricUpdate(newValue)
-    
+        advanceMetrics()
     }
     
     func writeMetricUpdate(value: Float) {
@@ -309,15 +347,55 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
             print("Welp. An exception occurred.")
         }
     }
+    
+    func advanceMetrics() {
+        let sectionOfCurrent = possibleMetricCategories.indexOf(activeMetric!.type.metricCategory)!
+        let indexOfCurrent = processedMetrics[activeMetric!.type.metricCategory]!.indexOf({$0.type.metricDefinition == activeMetric!.type.metricDefinition })!
+        
+        var sectionOfNext: Int
+        var indexOfNext: Int
+        
+        if indexOfCurrent >= processedMetrics[activeMetric!.type.metricCategory]!.count - 1 {
+            sectionOfNext = sectionOfCurrent + 1
+            indexOfNext = 0
+        } else {
+            sectionOfNext = sectionOfCurrent
+            indexOfNext = indexOfCurrent + 1
+        }
+        
+        guard sectionOfNext != possibleMetricCategories.count else {
+            rightButtonPressed(self)            
+            return
+            // move here
+        }
+        
+        metricsTableController!.tableView.selectRowAtIndexPath(NSIndexPath(forRow: indexOfNext, inSection: sectionOfNext), animated: true, scrollPosition: UITableViewScrollPosition.Top)
+        tableView(metricsTableController!.tableView, didSelectRowAtIndexPath: NSIndexPath(forRow: indexOfNext, inSection: sectionOfNext))
+    }
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        let textView = object as! UITextView
+        var top = (textView.bounds.size.height - textView.contentSize.height * textView.zoomScale) / 2.0
+        top = top < 0.0 ? 0.0 : top
+        textView.contentInset = UIEdgeInsetsMake(top, 0, 0, 0)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        headerTitleView.removeObserver(self, forKeyPath: "contentSize")
+    }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showResultsSegue" {
+            let resultsController = segue.destinationViewController as! ResultsViewController
+            resultsController.decision = decision!
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+ 
 
 }

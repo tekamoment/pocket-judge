@@ -66,10 +66,10 @@ class Option: Object {
                 return nil
             }
             
-            metricDictionary[metric.type.metricDefinition] = metric.userValue.value
+            metricDictionary[metric.type.metricDefinition.lowercaseString] = metric.userValue.value
         }
         
-        guard Set(Array(metricDictionary.keys)).isSubsetOf(Set(metricList)) else {
+        guard Set(Array(metricDictionary.keys)) == Set(metricList) else {
             return nil
         }
         
@@ -77,7 +77,15 @@ class Option: Object {
         let secondMultiply = metricDictionary["risk"]! + (metricDictionary["distance"]! + metricDictionary["time"]!)
         let thirdMultiply = 1 + (metricDictionary["familiarity"]! + metricDictionary["opportunity"]! + metricDictionary["quality"]!) / 3 - (metricDictionary["money"]! + metricDictionary["effort"]!) / 2
         let fourthMultiply = metricDictionary["coolness"]! + metricDictionary["thoughtfulness"]!
-        aggregateValue.value = firstMultiply * secondMultiply * thirdMultiply * fourthMultiply
+        
+        do {
+            try Realm().write({
+                self.aggregateValue.value = firstMultiply * secondMultiply * thirdMultiply * fourthMultiply
+            })
+        } catch {
+            print("Welp. An error occurred in saving the aggregate value.")
+        }
+        
         return aggregateValue.value
     }
     

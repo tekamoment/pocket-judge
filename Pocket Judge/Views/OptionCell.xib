@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="329" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LJc-yc-zaH" id="mw0-2x-4GM">
-                <rect key="frame" x="0.0" y="0.0" width="329" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="329" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Di-vc-vac">
@@ -36,6 +36,7 @@
                         <rect key="frame" x="249" y="10" width="25" height="25"/>
                         <state key="normal" image="EditIconBrown"/>
                         <connections>
+                            <action selector="editNameButtonTapped:" destination="LJc-yc-zaH" eventType="touchUpInside" id="Qje-MC-QG8"/>
                             <action selector="trashButtonTapped:" destination="LJc-yc-zaH" eventType="touchUpInside" id="zhH-Ya-WQ1"/>
                         </connections>
                     </button>

@@ -1,27 +1,22 @@
 //
-//  SentencedOptionViewController.swift
+//  TextViewController.swift
 //  Pocket Judge
 //
-//  Created by Carlos Arcenas on 3/27/16.
+//  Created by Carlos Arcenas on 3/29/16.
 //  Copyright © 2016 Carlos Arcenas. All rights reserved.
 //
 
 import UIKit
 
-class SentencedOptionViewController: UIViewController {
+class TextViewController: UIViewController {
 
-    @IBOutlet weak var sentencedOptionLabel: UILabel!
-    
-    var decision: Decision?
-    var holdingController: UIViewController?
-    
-    // next button to dismiss this modal controller
-    
+    @IBOutlet weak var textView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.layer.insertSublayer(CAGradientLayer.pocketJudgeBackgroundGradientLayer(view.bounds), atIndex: 0)
-        let sentencedOption = decision!.options.sorted("aggregateValue", ascending: false).first!
-        sentencedOptionLabel.text = sentencedOption.name.capitalizedString
+        view.backgroundColor = UIColor.clearColor()
+        textView.backgroundColor = UIColor.clearColor()
+        textView.textColor = UIColor.whiteColor()
+        textView.userInteractionEnabled = false
         // Do any additional setup after loading the view.
     }
 
@@ -30,9 +25,6 @@ class SentencedOptionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func nextButtonPressed(sender: AnyObject) {
-        holdingController!.dismissViewControllerAnimated(true, completion: nil)
-    }
 
     /*
     // MARK: - Navigation

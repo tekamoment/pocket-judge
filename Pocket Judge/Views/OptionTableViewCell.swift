@@ -15,11 +15,11 @@ class OptionTableViewCell: UITableViewCell {
     var decisionState: DecisionState? {
         didSet {
             if decisionState == .ExistingDecisionsState {
-                backgroundColor = UIColor(hex: "f6b783")
+                contentView.backgroundColor = UIColor(hex: "f6b783")
                 optionTitleLabel.textColor = UIColor.whiteColor()
                 editNameButton.hidden = true
             } else {
-                backgroundColor = UIColor(hex: "f3e4cc")
+                contentView.backgroundColor = UIColor(hex: "f3e4cc")
                 optionTitleLabel.textColor = UIColor.blackColor()
                 editNameButton.hidden = false
             }
@@ -42,6 +42,11 @@ class OptionTableViewCell: UITableViewCell {
     @IBAction func trashButtonTapped(sender: AnyObject) {
         delegate?.trashButtonTapped(cellIndex!)
     }
+    
+    @IBAction func editNameButtonTapped(sender: AnyObject) {
+        delegate?.editNameButtonTapped(cellIndex!)
+    }
+    
     
     // edit name button to be implemented
 

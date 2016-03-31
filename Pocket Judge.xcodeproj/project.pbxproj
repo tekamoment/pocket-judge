@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18147B0D1CA879F000A6028A /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18147B0C1CA879F000A6028A /* ResultsViewController.swift */; };
 		1815D0A01CA7E53E00DC89C7 /* BackgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 1815D09F1CA7E53E00DC89C7 /* BackgroundImage.png */; };
 		1815D0A41CA7E7F700DC89C7 /* SentencedOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815D0A31CA7E7F600DC89C7 /* SentencedOptionViewController.swift */; };
 		1815D0A71CA7E88F00DC89C7 /* Judge.png in Resources */ = {isa = PBXBuildFile; fileRef = 1815D0A51CA7E88F00DC89C7 /* Judge.png */; };
 		1815D0A81CA7E88F00DC89C7 /* Stenographer.png in Resources */ = {isa = PBXBuildFile; fileRef = 1815D0A61CA7E88F00DC89C7 /* Stenographer.png */; };
+		181C17DB1CA9F60300416CF3 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C17D91CA9F60300416CF3 /* TextViewController.swift */; };
+		181C17DC1CA9F60300416CF3 /* TextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181C17DA1CA9F60300416CF3 /* TextViewController.xib */; };
 		181DFC1D1CA2B08000DFF34D /* MetricCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181DFC1C1CA2B08000DFF34D /* MetricCell.xib */; };
 		181DFC211CA2D10700DFF34D /* MetricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DFC201CA2D10700DFF34D /* MetricViewController.swift */; };
 		181DFC231CA2D2D700DFF34D /* ResultSliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DFC221CA2D2D700DFF34D /* ResultSliderTableViewCell.swift */; };
@@ -52,8 +55,14 @@
 		181FEE321CA03B580059ABE1 /* OptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE311CA03B580059ABE1 /* OptionCell.xib */; };
 		181FEE341CA03C1F0059ABE1 /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FEE331CA03C1F0059ABE1 /* OptionTableViewCell.swift */; };
 		181FEE361CA0444B0059ABE1 /* ResultSliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181FEE351CA0444B0059ABE1 /* ResultSliderCell.xib */; };
+		18362C3E1CADD0BF0003EE84 /* ThumbsPlusClock.png in Resources */ = {isa = PBXBuildFile; fileRef = 18362C3D1CADD0BF0003EE84 /* ThumbsPlusClock.png */; };
+		18362C431CADDE5E0003EE84 /* FinalEquation.png in Resources */ = {isa = PBXBuildFile; fileRef = 18362C3F1CADDE5E0003EE84 /* FinalEquation.png */; };
+		18362C441CADDE5E0003EE84 /* SocialnessWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 18362C401CADDE5E0003EE84 /* SocialnessWhite.png */; };
+		18362C451CADDE5E0003EE84 /* GearsMinusPriceTag.png in Resources */ = {isa = PBXBuildFile; fileRef = 18362C411CADDE5E0003EE84 /* GearsMinusPriceTag.png */; };
+		18362C461CADDE5E0003EE84 /* DicePlusSeparatedDots.png in Resources */ = {isa = PBXBuildFile; fileRef = 18362C421CADDE5E0003EE84 /* DicePlusSeparatedDots.png */; };
+		18362C481CADE1B90003EE84 /* SentenceBanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 18362C471CADE1B90003EE84 /* SentenceBanner.png */; };
+		18362C4A1CADE20B0003EE84 /* SentenceBanner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18362C491CADE20B0003EE84 /* SentenceBanner@2x.png */; };
 		18F0C36A1C75CC150042BCA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C3691C75CC150042BCA3 /* AppDelegate.swift */; };
-		18F0C36C1C75CC150042BCA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C36B1C75CC150042BCA3 /* ViewController.swift */; };
 		18F0C36F1C75CC150042BCA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C36D1C75CC150042BCA3 /* Main.storyboard */; };
 		18F0C3711C75CC150042BCA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C3701C75CC150042BCA3 /* Assets.xcassets */; };
 		18F0C3741C75CC150042BCA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C3721C75CC150042BCA3 /* LaunchScreen.storyboard */; };
@@ -84,10 +93,13 @@
 
 /* Begin PBXFileReference section */
 		1708C28216CA18952E7ADDEB /* Pods-Pocket Judge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Judge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket Judge/Pods-Pocket Judge.debug.xcconfig"; sourceTree = "<group>"; };
+		18147B0C1CA879F000A6028A /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsViewController.swift; path = "View controllers/ResultsViewController.swift"; sourceTree = "<group>"; };
 		1815D09F1CA7E53E00DC89C7 /* BackgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundImage.png; sourceTree = "<group>"; };
 		1815D0A31CA7E7F600DC89C7 /* SentencedOptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SentencedOptionViewController.swift; path = "View controllers/SentencedOptionViewController.swift"; sourceTree = "<group>"; };
 		1815D0A51CA7E88F00DC89C7 /* Judge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Judge.png; sourceTree = "<group>"; };
 		1815D0A61CA7E88F00DC89C7 /* Stenographer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stenographer.png; sourceTree = "<group>"; };
+		181C17D91CA9F60300416CF3 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewController.swift; path = "View controllers/TextViewController.swift"; sourceTree = "<group>"; };
+		181C17DA1CA9F60300416CF3 /* TextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextViewController.xib; path = "View controllers/TextViewController.xib"; sourceTree = "<group>"; };
 		181DFC1C1CA2B08000DFF34D /* MetricCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MetricCell.xib; path = Views/MetricCell.xib; sourceTree = "<group>"; };
 		181DFC201CA2D10700DFF34D /* MetricViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MetricViewController.swift; path = "View controllers/MetricViewController.swift"; sourceTree = "<group>"; };
 		181DFC221CA2D2D700DFF34D /* ResultSliderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultSliderTableViewCell.swift; path = Views/ResultSliderTableViewCell.swift; sourceTree = "<group>"; };
@@ -129,9 +141,15 @@
 		181FEE311CA03B580059ABE1 /* OptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OptionCell.xib; path = Views/OptionCell.xib; sourceTree = "<group>"; };
 		181FEE331CA03C1F0059ABE1 /* OptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionTableViewCell.swift; path = Views/OptionTableViewCell.swift; sourceTree = "<group>"; };
 		181FEE351CA0444B0059ABE1 /* ResultSliderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultSliderCell.xib; path = Views/ResultSliderCell.xib; sourceTree = "<group>"; };
+		18362C3D1CADD0BF0003EE84 /* ThumbsPlusClock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThumbsPlusClock.png; sourceTree = "<group>"; };
+		18362C3F1CADDE5E0003EE84 /* FinalEquation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FinalEquation.png; sourceTree = "<group>"; };
+		18362C401CADDE5E0003EE84 /* SocialnessWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SocialnessWhite.png; sourceTree = "<group>"; };
+		18362C411CADDE5E0003EE84 /* GearsMinusPriceTag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GearsMinusPriceTag.png; sourceTree = "<group>"; };
+		18362C421CADDE5E0003EE84 /* DicePlusSeparatedDots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DicePlusSeparatedDots.png; sourceTree = "<group>"; };
+		18362C471CADE1B90003EE84 /* SentenceBanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SentenceBanner.png; sourceTree = "<group>"; };
+		18362C491CADE20B0003EE84 /* SentenceBanner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SentenceBanner@2x.png"; sourceTree = "<group>"; };
 		18F0C3661C75CC150042BCA3 /* Pocket Judge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Judge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F0C3691C75CC150042BCA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18F0C36B1C75CC150042BCA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18F0C36E1C75CC150042BCA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18F0C3701C75CC150042BCA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18F0C3731C75CC150042BCA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -194,10 +212,12 @@
 			isa = PBXGroup;
 			children = (
 				18FF2DE91CA166DF00123079 /* PocketJudgeAlertViewStyle.swift */,
-				18F0C36B1C75CC150042BCA3 /* ViewController.swift */,
 				181FEDE11CA00E7C0059ABE1 /* HomeViewController.swift */,
 				181FEDDF1CA00B6D0059ABE1 /* DecisionViewController.swift */,
+				181C17D91CA9F60300416CF3 /* TextViewController.swift */,
+				181C17DA1CA9F60300416CF3 /* TextViewController.xib */,
 				181DFC201CA2D10700DFF34D /* MetricViewController.swift */,
+				18147B0C1CA879F000A6028A /* ResultsViewController.swift */,
 				1815D0A31CA7E7F600DC89C7 /* SentencedOptionViewController.swift */,
 			);
 			name = "View controllers";
@@ -277,6 +297,13 @@
 				1815D09F1CA7E53E00DC89C7 /* BackgroundImage.png */,
 				1815D0A51CA7E88F00DC89C7 /* Judge.png */,
 				1815D0A61CA7E88F00DC89C7 /* Stenographer.png */,
+				18362C3D1CADD0BF0003EE84 /* ThumbsPlusClock.png */,
+				18362C3F1CADDE5E0003EE84 /* FinalEquation.png */,
+				18362C401CADDE5E0003EE84 /* SocialnessWhite.png */,
+				18362C411CADDE5E0003EE84 /* GearsMinusPriceTag.png */,
+				18362C421CADDE5E0003EE84 /* DicePlusSeparatedDots.png */,
+				18362C471CADE1B90003EE84 /* SentenceBanner.png */,
+				18362C491CADE20B0003EE84 /* SentenceBanner@2x.png */,
 				18F0C3691C75CC150042BCA3 /* AppDelegate.swift */,
 				181DFC2C1CA7D47400DFF34D /* Helpers */,
 				181DFC2B1CA7D46800DFF34D /* View controllers */,
@@ -438,16 +465,20 @@
 				18FF2DE61CA14B5C00123079 /* brandon_grotesque_bold.ttf in Resources */,
 				181FEE101CA01A490059ABE1 /* FiraSans-Italic.ttf in Resources */,
 				1815D0A01CA7E53E00DC89C7 /* BackgroundImage.png in Resources */,
+				18362C431CADDE5E0003EE84 /* FinalEquation.png in Resources */,
 				181FEE111CA01A490059ABE1 /* FiraSans-Light.ttf in Resources */,
 				181FEE121CA01A490059ABE1 /* FiraSans-LightItalic.ttf in Resources */,
+				18362C4A1CADE20B0003EE84 /* SentenceBanner@2x.png in Resources */,
 				181FEE131CA01A490059ABE1 /* FiraSans-Medium.ttf in Resources */,
 				181FEE361CA0444B0059ABE1 /* ResultSliderCell.xib in Resources */,
 				181FEE141CA01A490059ABE1 /* FiraSans-MediumItalic.ttf in Resources */,
+				18362C451CADDE5E0003EE84 /* GearsMinusPriceTag.png in Resources */,
 				181FEE151CA01A490059ABE1 /* FiraSans-Regular.ttf in Resources */,
 				181FEE2F1CA02FC60059ABE1 /* JudgeProfile.png in Resources */,
 				181FEE301CA02FC60059ABE1 /* StenographerProfile.png in Resources */,
 				181FEE161CA01A490059ABE1 /* TitilliumWeb-Black.ttf in Resources */,
 				181FEE171CA01A490059ABE1 /* TitilliumWeb-Bold.ttf in Resources */,
+				18362C441CADDE5E0003EE84 /* SocialnessWhite.png in Resources */,
 				181DFC271CA5977900DFF34D /* MetricHeader.xib in Resources */,
 				181FEE181CA01A490059ABE1 /* TitilliumWeb-BoldItalic.ttf in Resources */,
 				181FEE191CA01A490059ABE1 /* TitilliumWeb-ExtraLight.ttf in Resources */,
@@ -461,12 +492,16 @@
 				181FEE211CA01A490059ABE1 /* texgyreadventor-bold.otf in Resources */,
 				181FEE221CA01A490059ABE1 /* texgyreadventor-bolditalic.otf in Resources */,
 				181FEE231CA01A490059ABE1 /* texgyreadventor-italic.otf in Resources */,
+				18362C461CADDE5E0003EE84 /* DicePlusSeparatedDots.png in Resources */,
 				181FEE241CA01A490059ABE1 /* texgyreadventor-regular.otf in Resources */,
 				181FEE2B1CA02E550059ABE1 /* Cassannet Bold.otf in Resources */,
 				1815D0A81CA7E88F00DC89C7 /* Stenographer.png in Resources */,
 				181FEE2C1CA02E550059ABE1 /* Cassannet.otf in Resources */,
+				18362C3E1CADD0BF0003EE84 /* ThumbsPlusClock.png in Resources */,
+				181C17DC1CA9F60300416CF3 /* TextViewController.xib in Resources */,
 				18F0C3741C75CC150042BCA3 /* LaunchScreen.storyboard in Resources */,
 				181DFC1D1CA2B08000DFF34D /* MetricCell.xib in Resources */,
+				18362C481CADE1B90003EE84 /* SentenceBanner.png in Resources */,
 				18F0C3711C75CC150042BCA3 /* Assets.xcassets in Resources */,
 				18F0C36F1C75CC150042BCA3 /* Main.storyboard in Resources */,
 				1815D0A71CA7E88F00DC89C7 /* Judge.png in Resources */,
@@ -544,11 +579,12 @@
 			files = (
 				181FEDDC1CA003FC0059ABE1 /* ContainedTableViewDataSource.swift in Sources */,
 				181FEE281CA0210A0059ABE1 /* BackgroundGradient.swift in Sources */,
-				18F0C36C1C75CC150042BCA3 /* ViewController.swift in Sources */,
 				181DFC231CA2D2D700DFF34D /* ResultSliderTableViewCell.swift in Sources */,
 				181FEDDA1CA000240059ABE1 /* HeaderContainerViewController.swift in Sources */,
 				181DFC251CA2E36E00DFF34D /* MetricTableViewCell.swift in Sources */,
 				18F0C36A1C75CC150042BCA3 /* AppDelegate.swift in Sources */,
+				18147B0D1CA879F000A6028A /* ResultsViewController.swift in Sources */,
+				181C17DB1CA9F60300416CF3 /* TextViewController.swift in Sources */,
 				181FEE341CA03C1F0059ABE1 /* OptionTableViewCell.swift in Sources */,
 				1815D0A41CA7E7F700DC89C7 /* SentencedOptionViewController.swift in Sources */,
 				181FEDE01CA00B6D0059ABE1 /* DecisionViewController.swift in Sources */,

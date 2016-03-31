@@ -18,35 +18,37 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tg2-gc-FY5" id="hZv-Ho-Lbm">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8B-4F-N96">
-                        <rect key="frame" x="8" y="12" width="90" height="25"/>
-                        <fontDescription key="fontDescription" name="BrandonGrotesque-Bold" family="Brandon Grotesque" pointSize="17"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qb4-cA-jPO">
-                        <rect key="frame" x="282" y="12" width="30" height="25"/>
+                        <rect key="frame" x="268" y="11" width="30" height="25"/>
                         <fontDescription key="fontDescription" name="BrandonGrotesque-Bold" family="Brandon Grotesque" pointSize="17"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lQm-n4-tkJ">
-                        <rect key="frame" x="6" y="41" width="308" height="31"/>
+                        <rect key="frame" x="20" y="41" width="280" height="31"/>
                         <color key="minimumTrackTintColor" red="0.65098039220000004" green="0.35294117650000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="maximumTrackTintColor" red="0.91764705879999997" green="0.92156862750000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     </slider>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8B-4F-N96">
+                        <rect key="frame" x="22" y="11" width="90" height="25"/>
+                        <fontDescription key="fontDescription" name="BrandonGrotesque-Bold" family="Brandon Grotesque" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" red="0.96470588235294119" green="0.71764705882352942" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstItem="W8B-4F-N96" firstAttribute="leading" secondItem="hZv-Ho-Lbm" secondAttribute="leadingMargin" id="MKV-ix-9f3"/>
-                    <constraint firstItem="W8B-4F-N96" firstAttribute="baseline" secondItem="Qb4-cA-jPO" secondAttribute="baseline" id="PBx-1m-AYK"/>
-                    <constraint firstItem="lQm-n4-tkJ" firstAttribute="top" secondItem="W8B-4F-N96" secondAttribute="bottom" constant="4" id="Po3-oe-Tra"/>
-                    <constraint firstItem="W8B-4F-N96" firstAttribute="leading" secondItem="lQm-n4-tkJ" secondAttribute="leading" id="RPZ-bI-jXl"/>
-                    <constraint firstItem="Qb4-cA-jPO" firstAttribute="trailing" secondItem="hZv-Ho-Lbm" secondAttribute="trailingMargin" id="iDm-Z2-PdH"/>
-                    <constraint firstItem="W8B-4F-N96" firstAttribute="top" secondItem="hZv-Ho-Lbm" secondAttribute="topMargin" constant="4" id="waA-19-wjG"/>
-                    <constraint firstItem="Qb4-cA-jPO" firstAttribute="trailing" secondItem="lQm-n4-tkJ" secondAttribute="trailing" id="zS2-i7-UhQ"/>
+                    <constraint firstItem="lQm-n4-tkJ" firstAttribute="centerX" secondItem="hZv-Ho-Lbm" secondAttribute="centerX" id="2Yg-jn-W7R"/>
+                    <constraint firstItem="lQm-n4-tkJ" firstAttribute="top" secondItem="W8B-4F-N96" secondAttribute="bottom" constant="5" id="4wE-0e-Qv3"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="lQm-n4-tkJ" secondAttribute="bottom" constant="1" id="5Kh-no-tVu"/>
+                    <constraint firstItem="W8B-4F-N96" firstAttribute="baseline" secondItem="Qb4-cA-jPO" secondAttribute="baseline" id="DTY-b1-Vo3"/>
+                    <constraint firstItem="W8B-4F-N96" firstAttribute="leading" secondItem="lQm-n4-tkJ" secondAttribute="leading" id="IKY-9u-pO3"/>
+                    <constraint firstItem="W8B-4F-N96" firstAttribute="top" secondItem="hZv-Ho-Lbm" secondAttribute="topMargin" constant="3" id="fji-YC-ty9"/>
+                    <constraint firstItem="Qb4-cA-jPO" firstAttribute="trailing" secondItem="lQm-n4-tkJ" secondAttribute="trailing" id="iQC-vf-aNe"/>
+                    <constraint firstItem="W8B-4F-N96" firstAttribute="leading" secondItem="hZv-Ho-Lbm" secondAttribute="leadingMargin" constant="14" id="vu8-0Y-NaZ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
