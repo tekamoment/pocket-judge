@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SDCAlertView
 import RealmSwift
 
 class MetricViewController: HeaderContainerViewController, UITableViewDataSource, UITableViewDelegate {

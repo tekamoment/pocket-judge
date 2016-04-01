@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SDCAlertView
 
 class ResultsViewController: HeaderContainerViewController, UITableViewDelegate {
 

@@ -65,6 +65,7 @@
 		18362C501CADE7610003EE84 /* Confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = 18362C4F1CADE7610003EE84 /* Confetti.png */; };
 		18362C531CADE9080003EE84 /* Confetti.sks in Resources */ = {isa = PBXBuildFile; fileRef = 18362C511CADE9080003EE84 /* Confetti.sks */; };
 		18362C541CADE9080003EE84 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 18362C521CADE9080003EE84 /* spark.png */; };
+		18362C561CAE4E9E0003EE84 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 18362C551CAE4E9E0003EE84 /* iTunesArtwork.png */; };
 		18F0C36A1C75CC150042BCA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C3691C75CC150042BCA3 /* AppDelegate.swift */; };
 		18F0C36F1C75CC150042BCA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C36D1C75CC150042BCA3 /* Main.storyboard */; };
 		18F0C3711C75CC150042BCA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C3701C75CC150042BCA3 /* Assets.xcassets */; };
@@ -73,7 +74,6 @@
 		18F0C38A1C75CC150042BCA3 /* Pocket_JudgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C3891C75CC150042BCA3 /* Pocket_JudgeUITests.swift */; };
 		18F0C3981C75CD690042BCA3 /* Decision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C3971C75CD690042BCA3 /* Decision.swift */; };
 		18FF2DE61CA14B5C00123079 /* brandon_grotesque_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18FF2DE51CA14B5C00123079 /* brandon_grotesque_bold.ttf */; };
-		18FF2DEA1CA166DF00123079 /* PocketJudgeAlertViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FF2DE91CA166DF00123079 /* PocketJudgeAlertViewStyle.swift */; };
 		795C76C8B814ECB3AD259505 /* Pods_Pocket_Judge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBDD15BFD08E78588E4FC7B7 /* Pods_Pocket_Judge.framework */; };
 /* End PBXBuildFile section */
 
@@ -154,6 +154,7 @@
 		18362C4F1CADE7610003EE84 /* Confetti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Confetti.png; sourceTree = "<group>"; };
 		18362C511CADE9080003EE84 /* Confetti.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Confetti.sks; sourceTree = "<group>"; };
 		18362C521CADE9080003EE84 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		18362C551CAE4E9E0003EE84 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		18F0C3661C75CC150042BCA3 /* Pocket Judge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Judge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F0C3691C75CC150042BCA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18F0C36E1C75CC150042BCA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -168,7 +169,6 @@
 		18F0C38B1C75CC150042BCA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18F0C3971C75CD690042BCA3 /* Decision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Decision.swift; path = Models/Decision.swift; sourceTree = "<group>"; };
 		18FF2DE51CA14B5C00123079 /* brandon_grotesque_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = brandon_grotesque_bold.ttf; sourceTree = "<group>"; };
-		18FF2DE91CA166DF00123079 /* PocketJudgeAlertViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PocketJudgeAlertViewStyle.swift; path = Helpers/PocketJudgeAlertViewStyle.swift; sourceTree = "<group>"; };
 		D414A0A81777D1A8820730B1 /* Pods-Pocket Judge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Judge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket Judge/Pods-Pocket Judge.release.xcconfig"; sourceTree = "<group>"; };
 		EBDD15BFD08E78588E4FC7B7 /* Pods_Pocket_Judge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_Judge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -217,7 +217,6 @@
 		181DFC2B1CA7D46800DFF34D /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
-				18FF2DE91CA166DF00123079 /* PocketJudgeAlertViewStyle.swift */,
 				181FEDE11CA00E7C0059ABE1 /* HomeViewController.swift */,
 				181FEDDF1CA00B6D0059ABE1 /* DecisionViewController.swift */,
 				181C17D91CA9F60300416CF3 /* TextViewController.swift */,
@@ -313,6 +312,7 @@
 				18362C471CADE1B90003EE84 /* SentenceBanner.png */,
 				18362C491CADE20B0003EE84 /* SentenceBanner@2x.png */,
 				18362C4F1CADE7610003EE84 /* Confetti.png */,
+				18362C551CAE4E9E0003EE84 /* iTunesArtwork.png */,
 				18F0C3691C75CC150042BCA3 /* AppDelegate.swift */,
 				181DFC2C1CA7D47400DFF34D /* Helpers */,
 				181DFC2B1CA7D46800DFF34D /* View controllers */,
@@ -517,6 +517,7 @@
 				18362C481CADE1B90003EE84 /* SentenceBanner.png in Resources */,
 				18F0C3711C75CC150042BCA3 /* Assets.xcassets in Resources */,
 				18F0C36F1C75CC150042BCA3 /* Main.storyboard in Resources */,
+				18362C561CAE4E9E0003EE84 /* iTunesArtwork.png in Resources */,
 				1815D0A71CA7E88F00DC89C7 /* Judge.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,7 +606,6 @@
 				18F0C3981C75CD690042BCA3 /* Decision.swift in Sources */,
 				181DFC291CA597F500DFF34D /* MetricHeaderView.swift in Sources */,
 				181DFC211CA2D10700DFF34D /* MetricViewController.swift in Sources */,
-				18FF2DEA1CA166DF00123079 /* PocketJudgeAlertViewStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

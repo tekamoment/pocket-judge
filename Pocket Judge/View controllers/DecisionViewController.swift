@@ -9,8 +9,6 @@
 import UIKit
 import RealmSwift
 
-import SDCAlertView
-
 class DecisionViewController: HeaderContainerViewController, UITextViewDelegate, UITableViewDelegate, OptionTableViewCellDelegate {
     let realm = try! Realm()
     var decision: Decision?
