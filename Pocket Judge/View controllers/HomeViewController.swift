@@ -37,13 +37,14 @@ class HomeViewController: UIViewController {
         leftHomeButton.alpha = 0.0
         leftHomeButton.enabled = false
         
-        let segmentedFont = UIFont(name: "Cassannet-Bold", size: 27.0)
+        let segmentedFont = UIFont(name: "Cassannet-Bold", size: 27.0)!
         
         processMetricsControl.tintColor = UIColor.whiteColor()
         
-        UISegmentedControl.appearance().setTitleTextAttributes([NSFontAttributeName: segmentedFont!], forState: [.Normal, .Selected, .Highlighted])
-        
-//        processMetricsControl.setTitleTextAttributes([NSFontAttributeName: segmentedFont!], forState: [.Normal, .Selected, .Highlighted])
+        processMetricsControl.setTitleTextAttributes([NSFontAttributeName: segmentedFont, NSForegroundColorAttributeName: UIColor.whiteColor()], forState: [.Highlighted])
+        processMetricsControl.setTitleTextAttributes([NSFontAttributeName: segmentedFont, NSForegroundColorAttributeName: UIColor.whiteColor()], forState: [.Normal])
+        processMetricsControl.setTitleTextAttributes([NSFontAttributeName: segmentedFont, NSForegroundColorAttributeName: UIColor.whiteColor(), NSBackgroundColorAttributeName: UIColor.clearColor()], forState: [.Selected])
+        print("For normal: \(processMetricsControl.titleTextAttributesForState(.Selected))")
         
         processMetricsControl.setBackgroundImage(UIImage(named: "SegmentedButtonBackground"), forState: .Normal, barMetrics: .Default)
         processMetricsControl.setBackgroundImage(UIImage(named: "SegmentedButtonDivider"), forState: [.Selected, .Highlighted], barMetrics: .Default)
@@ -130,6 +131,10 @@ class HomeViewController: UIViewController {
     @IBAction func leftHomeButtonTapped(sender: AnyObject) {
         if currentPresented > 1 {
             currentPresented = currentPresented - 1
+            if currentPresented == 1 {
+                leftHomeButton.alpha = 0.0
+                leftHomeButton.enabled = false
+            }
             rightHomeButton.alpha = 1.0
             rightHomeButton.enabled = true
         } else {
@@ -205,11 +210,11 @@ class HomeViewController: UIViewController {
     func applyTextViewAttributedMessageAndDictionary(message: String) -> NSMutableAttributedString {
         let paragraphSpacingAttribute = NSMutableParagraphStyle()
         paragraphSpacingAttribute.lineSpacing = 0.0
-        paragraphSpacingAttribute.maximumLineHeight = 20.0
+        paragraphSpacingAttribute.maximumLineHeight = 18.0
         paragraphSpacingAttribute.alignment = .Left
         
         let spacedMessage = "\(message)"
-        let messageAttributeDictionary = [NSFontAttributeName: UIFont(name: "TeXGyreAdventor-Regular", size: 20)!, NSForegroundColorAttributeName: UIColor.whiteColor(), NSBackgroundColorAttributeName: UIColor.clearColor(),  NSParagraphStyleAttributeName: paragraphSpacingAttribute]
+        let messageAttributeDictionary = [NSFontAttributeName: UIFont(name: "TeXGyreAdventor-Regular", size: 18)!, NSForegroundColorAttributeName: UIColor.whiteColor(), NSBackgroundColorAttributeName: UIColor.clearColor(),  NSParagraphStyleAttributeName: paragraphSpacingAttribute]
        return NSMutableAttributedString(string: spacedMessage, attributes: messageAttributeDictionary)
     }
     

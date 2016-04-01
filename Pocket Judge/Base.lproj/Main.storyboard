@@ -52,11 +52,21 @@
                                     <action selector="newDecisionTapped:" destination="LtC-b6-Sxz" eventType="touchUpInside" id="YXJ-3f-yVd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BD2-6a-h8a">
+                                <rect key="frame" x="540" y="598" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="xt0-Oi-bUN"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="RightHomeButton"/>
+                                <connections>
+                                    <action selector="rightHomeButtonTapped:" destination="LtC-b6-Sxz" eventType="touchUpInside" id="oAh-gp-958"/>
+                                </connections>
+                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XoJ-Co-T1G">
                                 <rect key="frame" x="0.0" y="358" width="600" height="29"/>
                                 <segments>
-                                    <segment title="Process"/>
-                                    <segment title="Metrics"/>
+                                    <segment title="PROCESS"/>
+                                    <segment title="METRICS"/>
                                 </segments>
                                 <connections>
                                     <action selector="processMetricsSwitchPressed:" destination="LtC-b6-Sxz" eventType="valueChanged" id="Km9-1t-Kcl"/>
@@ -69,16 +79,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BD2-6a-h8a">
-                                <rect key="frame" x="555" y="605" width="25" height="25"/>
-                                <state key="normal" image="RightHomeButton"/>
-                                <connections>
-                                    <action selector="rightHomeButtonTapped:" destination="LtC-b6-Sxz" eventType="touchUpInside" id="oAh-gp-958"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uM-pd-ThA">
-                                <rect key="frame" x="522" y="605" width="25" height="25"/>
-                                <state key="normal" image="LeftHomeButton"/>
+                                <rect key="frame" x="492" y="598" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MjO-hZ-6HH"/>
+                                    <constraint firstAttribute="width" constant="40" id="yjH-ub-D1S"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="LeftHomeButton"/>
                                 <connections>
                                     <action selector="leftHomeButtonTapped:" destination="LtC-b6-Sxz" eventType="touchUpInside" id="284-gw-gzl"/>
                                 </connections>
@@ -87,23 +94,24 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9q7-cM-iw4" firstAttribute="leading" secondItem="yde-VJ-MBy" secondAttribute="leading" id="0Vr-b5-B1a"/>
+                            <constraint firstItem="9uM-pd-ThA" firstAttribute="bottom" secondItem="BD2-6a-h8a" secondAttribute="bottom" id="6E4-v3-chz"/>
                             <constraint firstItem="9q7-cM-iw4" firstAttribute="top" secondItem="CzV-na-WI3" secondAttribute="topMargin" constant="62" id="Bm8-4U-y5K"/>
+                            <constraint firstItem="dnv-hP-2oz" firstAttribute="top" secondItem="9uM-pd-ThA" secondAttribute="bottom" constant="12" id="Frp-dV-Mw4"/>
+                            <constraint firstItem="BD2-6a-h8a" firstAttribute="trailing" secondItem="IK1-nb-nvd" secondAttribute="trailing" id="K0i-Jy-mhR"/>
                             <constraint firstAttribute="trailing" secondItem="9q7-cM-iw4" secondAttribute="trailing" id="Lj1-3q-8jo"/>
                             <constraint firstItem="IK1-nb-nvd" firstAttribute="leading" secondItem="CzV-na-WI3" secondAttribute="leadingMargin" id="Nvb-2a-8Ir"/>
                             <constraint firstItem="9q7-cM-iw4" firstAttribute="leading" secondItem="CzV-na-WI3" secondAttribute="leading" id="OeL-3E-mBw"/>
                             <constraint firstItem="yde-VJ-MBy" firstAttribute="trailing" secondItem="XoJ-Co-T1G" secondAttribute="trailing" id="OoK-Gn-S4U"/>
                             <constraint firstItem="yde-VJ-MBy" firstAttribute="leading" secondItem="XoJ-Co-T1G" secondAttribute="leading" id="P1Z-Od-Ubv"/>
                             <constraint firstItem="yde-VJ-MBy" firstAttribute="top" secondItem="9q7-cM-iw4" secondAttribute="bottom" constant="6" id="STQ-FH-uEf"/>
-                            <constraint firstItem="BD2-6a-h8a" firstAttribute="trailing" secondItem="IK1-nb-nvd" secondAttribute="trailing" id="Wti-7w-ueK"/>
-                            <constraint firstItem="BD2-6a-h8a" firstAttribute="leading" secondItem="9uM-pd-ThA" secondAttribute="trailing" constant="8" symbolic="YES" id="dfH-HS-97A"/>
                             <constraint firstItem="XoJ-Co-T1G" firstAttribute="centerX" secondItem="IK1-nb-nvd" secondAttribute="centerX" id="gZJ-pk-kdL"/>
+                            <constraint firstItem="BD2-6a-h8a" firstAttribute="leading" secondItem="9uM-pd-ThA" secondAttribute="trailing" constant="8" symbolic="YES" id="j2U-5I-EQI"/>
                             <constraint firstItem="9q7-cM-iw4" firstAttribute="trailing" secondItem="yde-VJ-MBy" secondAttribute="trailing" id="qkV-oG-vKV"/>
                             <constraint firstItem="9q7-cM-iw4" firstAttribute="top" secondItem="Nmd-hU-Wj0" secondAttribute="bottom" id="rQ9-mL-LfU"/>
-                            <constraint firstItem="9uM-pd-ThA" firstAttribute="top" secondItem="IK1-nb-nvd" secondAttribute="bottom" constant="15" id="tso-aP-YOu"/>
+                            <constraint firstItem="9uM-pd-ThA" firstAttribute="top" secondItem="BD2-6a-h8a" secondAttribute="top" id="taK-ez-Yt3"/>
                             <constraint firstItem="XoJ-Co-T1G" firstAttribute="top" secondItem="yde-VJ-MBy" secondAttribute="bottom" constant="8" symbolic="YES" id="vLz-U2-FoX"/>
-                            <constraint firstAttribute="bottom" secondItem="9uM-pd-ThA" secondAttribute="bottom" constant="20" symbolic="YES" id="x3A-dh-uWw"/>
+                            <constraint firstItem="9uM-pd-ThA" firstAttribute="top" secondItem="IK1-nb-nvd" secondAttribute="bottom" constant="8" symbolic="YES" id="w51-iG-wJA"/>
                             <constraint firstItem="IK1-nb-nvd" firstAttribute="top" secondItem="XoJ-Co-T1G" secondAttribute="bottom" constant="8" symbolic="YES" id="xkD-7J-hPA"/>
-                            <constraint firstItem="9uM-pd-ThA" firstAttribute="top" secondItem="BD2-6a-h8a" secondAttribute="top" id="yn6-9f-NUD"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

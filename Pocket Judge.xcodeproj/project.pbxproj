@@ -62,6 +62,9 @@
 		18362C461CADDE5E0003EE84 /* DicePlusSeparatedDots.png in Resources */ = {isa = PBXBuildFile; fileRef = 18362C421CADDE5E0003EE84 /* DicePlusSeparatedDots.png */; };
 		18362C481CADE1B90003EE84 /* SentenceBanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 18362C471CADE1B90003EE84 /* SentenceBanner.png */; };
 		18362C4A1CADE20B0003EE84 /* SentenceBanner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18362C491CADE20B0003EE84 /* SentenceBanner@2x.png */; };
+		18362C501CADE7610003EE84 /* Confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = 18362C4F1CADE7610003EE84 /* Confetti.png */; };
+		18362C531CADE9080003EE84 /* Confetti.sks in Resources */ = {isa = PBXBuildFile; fileRef = 18362C511CADE9080003EE84 /* Confetti.sks */; };
+		18362C541CADE9080003EE84 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 18362C521CADE9080003EE84 /* spark.png */; };
 		18F0C36A1C75CC150042BCA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C3691C75CC150042BCA3 /* AppDelegate.swift */; };
 		18F0C36F1C75CC150042BCA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C36D1C75CC150042BCA3 /* Main.storyboard */; };
 		18F0C3711C75CC150042BCA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C3701C75CC150042BCA3 /* Assets.xcassets */; };
@@ -148,6 +151,9 @@
 		18362C421CADDE5E0003EE84 /* DicePlusSeparatedDots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DicePlusSeparatedDots.png; sourceTree = "<group>"; };
 		18362C471CADE1B90003EE84 /* SentenceBanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SentenceBanner.png; sourceTree = "<group>"; };
 		18362C491CADE20B0003EE84 /* SentenceBanner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SentenceBanner@2x.png"; sourceTree = "<group>"; };
+		18362C4F1CADE7610003EE84 /* Confetti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Confetti.png; sourceTree = "<group>"; };
+		18362C511CADE9080003EE84 /* Confetti.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Confetti.sks; sourceTree = "<group>"; };
+		18362C521CADE9080003EE84 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		18F0C3661C75CC150042BCA3 /* Pocket Judge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Judge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F0C3691C75CC150042BCA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18F0C36E1C75CC150042BCA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -293,6 +299,8 @@
 			isa = PBXGroup;
 			children = (
 				181FEE2D1CA02FC50059ABE1 /* JudgeProfile.png */,
+				18362C511CADE9080003EE84 /* Confetti.sks */,
+				18362C521CADE9080003EE84 /* spark.png */,
 				181FEE2E1CA02FC60059ABE1 /* StenographerProfile.png */,
 				1815D09F1CA7E53E00DC89C7 /* BackgroundImage.png */,
 				1815D0A51CA7E88F00DC89C7 /* Judge.png */,
@@ -304,6 +312,7 @@
 				18362C421CADDE5E0003EE84 /* DicePlusSeparatedDots.png */,
 				18362C471CADE1B90003EE84 /* SentenceBanner.png */,
 				18362C491CADE20B0003EE84 /* SentenceBanner@2x.png */,
+				18362C4F1CADE7610003EE84 /* Confetti.png */,
 				18F0C3691C75CC150042BCA3 /* AppDelegate.swift */,
 				181DFC2C1CA7D47400DFF34D /* Helpers */,
 				181DFC2B1CA7D46800DFF34D /* View controllers */,
@@ -423,6 +432,7 @@
 				TargetAttributes = {
 					18F0C3651C75CC150042BCA3 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = AKTPE3FTGW;
 					};
 					18F0C3791C75CC150042BCA3 = {
 						CreatedOnToolsVersion = 7.2;
@@ -466,6 +476,7 @@
 				181FEE101CA01A490059ABE1 /* FiraSans-Italic.ttf in Resources */,
 				1815D0A01CA7E53E00DC89C7 /* BackgroundImage.png in Resources */,
 				18362C431CADDE5E0003EE84 /* FinalEquation.png in Resources */,
+				18362C531CADE9080003EE84 /* Confetti.sks in Resources */,
 				181FEE111CA01A490059ABE1 /* FiraSans-Light.ttf in Resources */,
 				181FEE121CA01A490059ABE1 /* FiraSans-LightItalic.ttf in Resources */,
 				18362C4A1CADE20B0003EE84 /* SentenceBanner@2x.png in Resources */,
@@ -486,8 +497,10 @@
 				181FEE1B1CA01A490059ABE1 /* TitilliumWeb-Italic.ttf in Resources */,
 				181FEE1C1CA01A490059ABE1 /* TitilliumWeb-Light.ttf in Resources */,
 				181FEE1D1CA01A490059ABE1 /* TitilliumWeb-LightItalic.ttf in Resources */,
+				18362C501CADE7610003EE84 /* Confetti.png in Resources */,
 				181FEE1E1CA01A490059ABE1 /* TitilliumWeb-Regular.ttf in Resources */,
 				181FEE1F1CA01A490059ABE1 /* TitilliumWeb-SemiBold.ttf in Resources */,
+				18362C541CADE9080003EE84 /* spark.png in Resources */,
 				181FEE201CA01A490059ABE1 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */,
 				181FEE211CA01A490059ABE1 /* texgyreadventor-bold.otf in Resources */,
 				181FEE221CA01A490059ABE1 /* texgyreadventor-bolditalic.otf in Resources */,
@@ -733,9 +746,10 @@
 			baseConfigurationReference = 1708C28216CA18952E7ADDEB /* Pods-Pocket Judge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Pocket Judge/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.carlosarcenas.Pocket-Judge";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlosarcenas.PocketJudge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -745,9 +759,10 @@
 			baseConfigurationReference = D414A0A81777D1A8820730B1 /* Pods-Pocket Judge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Pocket Judge/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.carlosarcenas.Pocket-Judge";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlosarcenas.PocketJudge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

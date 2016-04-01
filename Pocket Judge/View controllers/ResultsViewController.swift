@@ -27,7 +27,7 @@ class ResultsViewController: HeaderContainerViewController, UITableViewDelegate 
             let resultCell = cell as! ResultSliderTableViewCell
             resultCell.optionNameLabel.text = opt.name.uppercaseString
             let percentageValue: Float = opt.aggregateValue.value! / 5.333333 * 100
-            resultCell.percentageLabel.text = String(format: "%.2f%", percentageValue)
+            resultCell.percentageLabel.text = String(format: "%.2f", percentageValue) + "%"
             resultCell.percentageSlider.minimumValue = 0
             resultCell.percentageSlider.maximumValue = 5.333333
             resultCell.percentageSlider.value = opt.aggregateValue.value!
@@ -53,6 +53,7 @@ class ResultsViewController: HeaderContainerViewController, UITableViewDelegate 
         resultsTableController!.tableView.rowHeight = UITableViewAutomaticDimension
         resultsTableController!.tableView.estimatedRowHeight = 50
         resultsTableController!.tableView.dataSource = resultsTableSource
+        resultsTableController!.tableView.separatorColor = UIColor.clearColor()
         
         resultsTableController!.tableView.backgroundColor = UIColor.clearColor()
         resultsTableController!.tableView.userInteractionEnabled = false
