@@ -11,7 +11,7 @@ import RealmSwift
 @testable import Pocket_Judge
 
 extension XCTestCase {
-    func XCTAssertThrows<T>(@autoclosure expression: () throws -> T, _ message: String = "", file: String = __FILE__, line: UInt = __LINE__) {
+    func XCTAssertThrows<T>(@autoclosure expression: () throws -> T, _ message: String = "", file: StaticString = #file, line: UInt = #line) {
         do {
             try expression()
             XCTFail("No error to catch! - \(message)", file: file, line: line)
@@ -19,7 +19,7 @@ extension XCTestCase {
         }
     }
     
-    func XCTAssertNoThrow<T>(@autoclosure expression: () throws -> T, _ message: String = "", file: String = __FILE__, line: UInt = __LINE__) {
+    func XCTAssertNoThrow<T>(@autoclosure expression: () throws -> T, _ message: String = "", file: StaticString = #file, line: UInt = #line) {
         do {
             try expression()
         } catch let error {

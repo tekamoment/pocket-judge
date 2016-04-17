@@ -120,8 +120,6 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="N8k-IZ-afd"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="650"/>
                     <connections>
                         <outlet property="leftHomeButton" destination="9uM-pd-ThA" id="Q85-9v-aBO"/>
                         <outlet property="processMetricsControl" destination="XoJ-Co-T1G" id="lic-lE-uV3"/>
