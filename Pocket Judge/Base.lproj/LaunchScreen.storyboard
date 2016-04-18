@@ -23,34 +23,94 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ric-IP-4CF">
                                 <rect key="frame" x="238" y="107" width="125" height="125"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="4qz-wB-LEi"/>
                                     <constraint firstAttribute="height" constant="125" id="Aks-K0-Hq5"/>
+                                    <constraint firstAttribute="width" constant="230" id="gD8-tk-Uci"/>
                                     <constraint firstAttribute="width" constant="125" id="hbT-Zg-UST"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4qz-wB-LEi"/>
+                                        <exclude reference="gD8-tk-Uci"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="4qz-wB-LEi"/>
+                                        <exclude reference="Aks-K0-Hq5"/>
+                                        <include reference="gD8-tk-Uci"/>
+                                        <exclude reference="hbT-Zg-UST"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoText" translatesAutoresizingMaskIntoConstraints="NO" id="UeC-Xs-9Ef">
                                 <rect key="frame" x="210" y="493" width="180" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="DdE-io-x6d"/>
+                                    <constraint firstAttribute="width" constant="270" id="Lf1-Lk-fIx"/>
+                                    <constraint firstAttribute="height" constant="60" id="QWf-9v-kdQ"/>
                                     <constraint firstAttribute="width" constant="180" id="aDb-34-d04"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Lf1-Lk-fIx"/>
+                                        <exclude reference="QWf-9v-kdQ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="DdE-io-x6d"/>
+                                        <include reference="Lf1-Lk-fIx"/>
+                                        <include reference="QWf-9v-kdQ"/>
+                                        <exclude reference="aDb-34-d04"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ric-IP-4CF" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="87" id="38g-a7-vyE"/>
                             <constraint firstItem="jmL-5u-fCB" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="7Z3-U3-POg"/>
+                            <constraint firstItem="UeC-Xs-9Ef" firstAttribute="centerX" secondItem="ric-IP-4CF" secondAttribute="centerX" id="8Gk-Op-gEw"/>
+                            <constraint firstItem="ric-IP-4CF" firstAttribute="centerX" secondItem="jmL-5u-fCB" secondAttribute="centerX" id="8MG-5c-65P"/>
                             <constraint firstItem="ric-IP-4CF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9yE-qh-2qp"/>
                             <constraint firstItem="jmL-5u-fCB" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="FP9-ra-EGn"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="UeC-Xs-9Ef" secondAttribute="bottom" constant="67" id="IbL-BA-OCs"/>
                             <constraint firstItem="jmL-5u-fCB" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="PY4-bi-eGl"/>
                             <constraint firstItem="jmL-5u-fCB" firstAttribute="centerX" secondItem="ric-IP-4CF" secondAttribute="centerX" id="acb-XL-tfO"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="UeC-Xs-9Ef" secondAttribute="bottom" constant="66" id="bmM-bF-DbD"/>
                             <constraint firstItem="UeC-Xs-9Ef" firstAttribute="centerX" secondItem="ric-IP-4CF" secondAttribute="centerX" id="jBB-vt-Z61"/>
+                            <constraint firstItem="ric-IP-4CF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lVP-gd-nBG"/>
+                            <constraint firstItem="ric-IP-4CF" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="85" id="vxw-oT-mg8"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8MG-5c-65P"/>
+                                <exclude reference="lVP-gd-nBG"/>
+                                <exclude reference="vxw-oT-mg8"/>
+                                <exclude reference="8Gk-Op-gEw"/>
+                                <exclude reference="bmM-bF-DbD"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="acb-XL-tfO"/>
+                                <exclude reference="38g-a7-vyE"/>
+                                <include reference="8MG-5c-65P"/>
+                                <exclude reference="9yE-qh-2qp"/>
+                                <include reference="lVP-gd-nBG"/>
+                                <include reference="vxw-oT-mg8"/>
+                                <include reference="8Gk-Op-gEw"/>
+                                <exclude reference="jBB-vt-Z61"/>
+                                <exclude reference="IbL-BA-OCs"/>
+                                <include reference="bmM-bF-DbD"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="375"/>
         </scene>
     </scenes>
     <resources>

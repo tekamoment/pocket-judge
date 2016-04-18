@@ -17,7 +17,7 @@ class HeaderContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         headerTitleView.backgroundColor = UIColor.clearColor()
-        headerTitleView.font = UIFont(name: "Cassannet-Bold", size: 34.0)
+        headerTitleView.font = UIFont(name: "Cassannet-Bold", size: UIDevice.currentDevice().userInterfaceIdiom == .Pad ? 60.0 : 34.0)
         headerTitleView.textContainer.maximumNumberOfLines = 2
         headerTitleView.textColor = UIColor.whiteColor()
         view.layer.insertSublayer(CAGradientLayer.pocketJudgeBackgroundGradientLayer(view.bounds), atIndex: 0)

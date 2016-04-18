@@ -45,7 +45,7 @@ class SentencedOptionViewController: UIViewController {
         
         let cell = CAEmitterCell()
         cell.birthRate = 40
-        cell.lifetime = 7
+        cell.lifetime = UIDevice.currentDevice().userInterfaceIdiom == .Pad ? 10 : 7
         cell.velocity = 100
         cell.velocityRange = 50
         cell.emissionLongitude = CGFloat(M_PI)

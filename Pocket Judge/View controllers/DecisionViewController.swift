@@ -85,7 +85,7 @@ class DecisionViewController: HeaderContainerViewController, UITextViewDelegate,
         decisionsTableController!.tableView.registerNib(UINib(nibName: "OptionCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "OptionCell")
         
         decisionsTableController!.tableView.rowHeight = UITableViewAutomaticDimension
-        decisionsTableController!.tableView.estimatedRowHeight = 50
+        decisionsTableController!.tableView.estimatedRowHeight = UIDevice.currentDevice().userInterfaceIdiom == .Pad ? 100.0 : 50.0
         
         decisionsTableController!.tableView.backgroundColor = UIColor.clearColor()
         

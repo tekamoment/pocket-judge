@@ -210,11 +210,12 @@ class HomeViewController: UIViewController {
     func applyTextViewAttributedMessageAndDictionary(message: String) -> NSMutableAttributedString {
         let paragraphSpacingAttribute = NSMutableParagraphStyle()
         paragraphSpacingAttribute.lineSpacing = 0.0
-        paragraphSpacingAttribute.maximumLineHeight = 18.0
+//        paragraphSpacingAttribute.maximumLineHeight = 18.0
+        paragraphSpacingAttribute.maximumLineHeight = UIDevice.currentDevice().userInterfaceIdiom == .Pad ? 30.0 : 18.0
         paragraphSpacingAttribute.alignment = .Left
         
         let spacedMessage = "\(message)"
-        let messageAttributeDictionary = [NSFontAttributeName: UIFont(name: "TeXGyreAdventor-Regular", size: 18)!, NSForegroundColorAttributeName: UIColor.whiteColor(), NSBackgroundColorAttributeName: UIColor.clearColor(),  NSParagraphStyleAttributeName: paragraphSpacingAttribute]
+        let messageAttributeDictionary = [NSFontAttributeName: UIFont(name: "TeXGyreAdventor-Regular", size: UIDevice.currentDevice().userInterfaceIdiom == .Pad ? 30.0 : 18.0)!, NSForegroundColorAttributeName: UIColor.whiteColor(), NSBackgroundColorAttributeName: UIColor.clearColor(),  NSParagraphStyleAttributeName: paragraphSpacingAttribute]
        return NSMutableAttributedString(string: spacedMessage, attributes: messageAttributeDictionary)
     }
     
