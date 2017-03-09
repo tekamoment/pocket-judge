@@ -8,8 +8,9 @@
 
 import UIKit
 import RealmSwift
+import Instructions
 
-class MetricViewController: HeaderContainerViewController, UITableViewDataSource, UITableViewDelegate {
+class MetricViewController: HeaderContainerViewController, UITableViewDataSource, UITableViewDelegate, CoachMarksControllerDataSource {
     
     // going to involve delegation
     let realm = try! Realm()
@@ -39,6 +40,9 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
     @IBOutlet weak var rightButton: UIButton!
 
     var metricsTableController: UITableViewController?
+    
+    // Instructions additions
+    var coachMarksController: CoachMarksController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +90,11 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
         //// delegate and datasouce
         metricsTableController!.tableView.dataSource = self
         metricsTableController!.tableView.delegate = self
+        
+        // Instructions
+        coachMarksController = CoachMarksController()
+        coachMarksController!.dataSource = self
+        coachMarksController!.allowOverlayTap = true
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -151,6 +160,7 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
     @IBAction func rightButtonPressed(sender: AnyObject) {
         let indexOfCurrentOption = decision!.options.indexOf(option!)!
         guard indexOfCurrentOption != decision!.options.count - 1 else {
+            coachMarksController!.startOn(self)
             return
         }
         
@@ -328,6 +338,8 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
     @IBAction func sliderValueChanged(sender: UISlider) {
         var newValue = sender.value
         
+        print("For active metric: \(activeMetric!.type) with bounds \(activeMetric!.type.maximumMinimum().0) and \(activeMetric!.type.maximumMinimum().1), slider value is \(newValue)")
+        
         if activeMetric!.type.metricCategory == "Cost" && newValue > 0.0 {
             newValue = (sender.value - activeMetric!.type.maximumMinimum().0) * -1.0
         }
@@ -381,6 +393,25 @@ class MetricViewController: HeaderContainerViewController, UITableViewDataSource
     
     override func viewWillDisappear(animated: Bool) {
         headerTitleView.removeObserver(self, forKeyPath: "contentSize")
+    }
+    
+    //// INSTRUCTIONS
+    func numberOfCoachMarksForCoachMarksController(coachMarksController: CoachMarksController) -> Int {
+        return 1
+    }
+    
+    func coachMarksController(coachMarksController: CoachMarksController, coachMarksForIndex index: Int) -> CoachMark {
+        return coachMarksController.coachMarkForView(self.navigationController?.navigationBar, bezierPathBlock: { (frame) -> UIBezierPath in
+            return UIBezierPath(rect: frame)
+        })
+    }
+    
+    func coachMarksController(coachMarksController: CoachMarksController, coachMarkViewsForIndex index: Int, coachMark: CoachMark) -> (bodyView: CoachMarkBodyView, arrowView: CoachMarkArrowView?) {
+        let coachView = coachMarksController.defaultCoachViewsWithArrow(true, withNextText: true, arrowOrientation: coachMark.arrowOrientation)
+        coachView.bodyView.hintLabel.text = "Tap the right-most button to receive your judgement!"
+        coachView.bodyView.nextLabel.text = "Okay"
+
+        return (bodyView: coachView.bodyView, arrowView: coachView.arrowView)
     }
 
     

@@ -75,7 +75,7 @@ class Option: Object {
         
         let firstMultiply = metricDictionary["fondness"]! * (metricDictionary["permanence"]! * metricDictionary["frequency"]!) / 56.25
         let secondMultiply = metricDictionary["risk"]! + (metricDictionary["distance"]! + metricDictionary["time"]!)
-        let thirdMultiply = 1 + (metricDictionary["familiarity"]! + metricDictionary["opportunity"]! + metricDictionary["quality"]!) / 3 - (metricDictionary["money"]! + metricDictionary["effort"]!) / 2
+        let thirdMultiply = 1 + ((metricDictionary["familiarity"]! + metricDictionary["opportunity"]! + metricDictionary["quality"]!) / 3) - ((metricDictionary["money"]! + metricDictionary["effort"]!) / 2)
         let fourthMultiply = metricDictionary["coolness"]! + metricDictionary["thoughtfulness"]!
         
         do {
